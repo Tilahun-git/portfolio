@@ -1,0 +1,30 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 170px;
+}
+.navbar img{
+    height: 70px;
+    width: 100px;
+}
+.nav-menu{
+list-style: none;
+display: flex;
+align-items: center;
+font-size: 20px;
+gap: 60px;
+}
+.connect-me{
+    border-radius: 50px;
+    background: linear-gradient(270deg, rgb(100, 95, 63), rgba(15, 72, 138, 0.849));
+    font-size: 22px;
+    padding:20px 40px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.connect-me:hover{
+    transform: scale(1.05);
+    border:2px solid rgb(5, 163, 89);
+
+}
