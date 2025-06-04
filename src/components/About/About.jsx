@@ -1,7 +1,7 @@
-import React from "react";
 import "./About.css";
 import theme from "../../assets/theme.jpg";
 import profile from "../../assets/profile.jpg";
+
 
 const About = () => {
   return (
@@ -18,16 +18,9 @@ const About = () => {
           <div className="about-paragraph">
             <p>
               I am experienced frontend web developer with an experience of over
-              two years.
-            </p>
-            As a passionate frontend developer, I specialize in creating
-            visually stunning and user-friendly web applications. With a strong
-            foundation in HTML, CSS, and JavaScript, I thrive on transforming
-            design concepts into seamless digital experiences.
-            <p>
-              My goal is to blend creativity with functionality, ensuring every
-              project not only looks great but also performs flawlessly
-            </p>
+              two years.As a passionate frontend developer, I specialize in creating
+            visually stunning and user-friendly web applications with cgreat creativity and mindsets.
+            </p> 
           </div>
           <div className="about-skills">
             <div className="about-skill">

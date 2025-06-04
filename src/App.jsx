@@ -1,4 +1,5 @@
-import React from 'react'
+
+
 import NavBar from './components/navbar/NavBar'
 import Hero from './components/Hero/Hero'
 import About from './components/About/About'
@@ -10,15 +11,31 @@ const App = () => {
   return (
     <div>
       <NavBar/>
-      <Hero/>
-      <About/>
-      {/* <Services/> */}
-      <Contact/>
-      {/* <Footer/> */}
+      <section id="home">
+       <Hero />
+      </section>
+
+      <section id="about">
+        <About/>
+      </section>
+
+      <section id="services">
+       <Services/>
+      </section>
+
+      <section id="contact">
+        <Contact/>
+      </section>
+     
+        <Footer/>
       
+   
     </div>
+   
   )
 }
 
+
 export default App
+
  

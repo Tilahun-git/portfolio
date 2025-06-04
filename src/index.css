@@ -4,6 +4,9 @@
 }
 body{
   height: 100vh;
-  background: #161513;
+  background: #0a0905;
   color: white;
+}
+html {
+  scroll-behavior: smooth;
 }

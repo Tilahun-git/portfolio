@@ -1,21 +1,25 @@
-import React from 'react'
-import './NavBar.css'
-import logo from '../../assets/logo.jpg'
+import { useEffect } from 'react';
+import './NavBar.css';
+import logo from '../../assets/logo.jpg';
 
 const NavBar = () => {
+  
   return (
     <div className='navbar'>
-      <img src={logo} alt="" />
+      <a href="#home"><img src={logo} alt="Logo" /></a>
+      
       <ul className="nav-menu">
-        <li>Home</li>
-        <li>About Me</li>
-        <li>Services</li>
-        {/* <li>Portfolio</li> */}
-        <li>Contact Me</li>
-       </ul>
-       <div className="connect-me">Connect With Me</div>
-    </div>
-  )
-}
+        <li><a href="#home" className="link">Home</a></li>
+        <li><a href="#about" className="link">About Me</a></li>
+        <li><a href="#services" className="link">Skills</a></li>
+        <li><a href="#services" className="link">My works</a></li>
+        <li><a href="#contact" className="link">Contact Me</a></li>
 
-export default NavBar
+      </ul>
+      
+      <div className="connect-me">Connect With Me</div>
+    </div>
+  );
+};
+
+export default NavBar;
