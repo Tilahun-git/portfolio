@@ -3,6 +3,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  /* background-image: url('../../assets/bbb.AVIF');
+   background-size: cover;
+  background-position: center; */
   gap: 60px;
 }
 .hero-title {
@@ -16,10 +19,7 @@
   flex-direction: column;
   justify-content: flex-start;
   margin-top: 100px;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.5;
-  gap: 15px;
+  
 }
 .hero-about h1 {
   font-weight: 600;
@@ -28,10 +28,18 @@
   width: 70%;
 }
 .hero-about h1 span {
-  background: linear-gradient(267deg, #df8908 10%, #b415ff 100%);
+  background: #a259ff;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.hero-about p {
+  font-size: 20px;
+  font-weight: 500;
+  line-height:50px;
+  gap: 5px;
+  text-align: start;
+
 }
 
 .hero-title img {
@@ -45,33 +53,53 @@
   transform: scale(1.2);
   cursor: pointer;
 }
-.hero-action {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-  font-size: 24px;
-  font-weight: 500;
-  margin-bottom: 50px;
-}
-.hero-connect {
-  padding: 25px 45px;
+.resume {
+  margin-top: 50px;
+  width: 50%;
+  padding: 20px 36px;
+  font-size: 17px;
+  font-weight: 600;
+  color: white;
+  background: #32323c;
+  border: none;
+  text-decoration: none;
+  border-radius: 40px;
   cursor: pointer;
-  background: linear-gradient(264deg, #b415ff, #2551af);
-  border-radius: 50px;
-  transition: 0.5s;
 }
-.hero-resume {
-  padding: 25px 75px;
-  cursor: pointer;
-  border: 2px solid #fff;
-  border-radius: 50px;
-  transition: 0.5s;
-}
-.hero-connect:hover {
-  transform: scale(1.05);
+
+.resume:hover,
+.resume:focus {
+  outline: none;
+  transform: scale(1.12);
+  background-color: #1b1079;
   border: 2px solid white;
+  transition: 0.5s;
 }
-.hero-resume:hover {
-  transform: scale(1.05);
-  border-color: #b415ff;
+
+.resume:active {
+  transform: translateY(0);
+  background-color: rgb(51, 21, 33);
+  box-shadow: 0 6px 10px rgba(37, 81, 175, 0.2);
+}
+
+@media (max-width:768px) {
+  .hero-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+.hero-title img {
+  display: none;
+}
+.hero-about p {
+  font-size: 28px;
+  text-align: start;
+}
+.hero-about h1 {
+  font-size: 48px;
+  text-align: start;
+}
+  
 }

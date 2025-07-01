@@ -6,7 +6,11 @@ body{
   height: 100vh;
   background: #0a0905;
   color: white;
+  font-family: 'Outfit', sans-serif;
+
 }
 html {
   scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* match your navbar height */
+
 }

@@ -17,31 +17,35 @@ const About = () => {
         <div className="about-right">
           <div className="about-paragraph">
             <p>
-              I am  experienced in frontend web developer with an experience of over
+              I am  experienced frontend web developer with out an experience of over
               two years.As a passionate frontend developer, I specialize in creating
-            visually stunning and user-friendly web applications with cgreat creativity and mindsets.
+            visually stunning and user-friendly web applications with great creativity and mindsets.
             </p> 
           </div>
           <div className="about-skills">
             <div className="about-skill">
-              <p>HTML and CSS </p>
-              <hr style={{ width: "50%" }} />
+              <p>HTML</p>
+              <hr style={{ width: "95%" }} />
             </div>
             <div className="about-skill">
-              <p>REACT JS </p>
-              <hr style={{ width: "75%" }} />
-            </div>
-            <div className="about-skill">
-              <p>NEXT JS </p>
+              <p>CSS</p>
               <hr style={{ width: "60%" }} />
             </div>
             <div className="about-skill">
-              <p>JS&TS </p> 
-              <hr style={{ width: "65%" }} />
+              <p>JAVA SCRIPT </p>
+              <hr style={{ width: "80%" }} />
             </div>
             <div className="about-skill">
-              <p>REACT NATIVE </p>
-              <hr style={{ width: "50%" }} />
+              <p>REACT JS</p> 
+              <hr style={{ width: "75%" }} />
+            </div>
+            <div className="about-skill">
+              <p>JAVA </p>
+              <hr style={{ width: "90%" }} />
+            </div>
+            <div className="about-skill">
+              <p>TYPESCRIPT </p>
+              <hr style={{ width: "45%" }} />
             </div>
           </div>
         </div>
