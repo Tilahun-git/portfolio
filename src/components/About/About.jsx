@@ -17,7 +17,7 @@ const About = () => {
         <div className="about-right">
           <div className="about-paragraph">
             <p>
-              I am  experienced frontend web developer with out an experience of over
+              I am  experienced frontend web developer with an experience of over
               two years.As a passionate frontend developer, I specialize in creating
             visually stunning and user-friendly web applications with great creativity and mindsets.
             </p> 
