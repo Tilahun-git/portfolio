@@ -1,4 +1,4 @@
-import profile from "../../assets/bbb.AVIF";
+import profile from "../../assets/bbb.avif";
 import "./Hero.css";
 
 const Hero = () => {
