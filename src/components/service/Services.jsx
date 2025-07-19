@@ -16,7 +16,7 @@ const Services = () => {
         {ProjectData.map((project, index) => {
           return (
             <div key={index} className="project-display" onClick={()=>window.open(project.repo, '_blank', 'noopener,noreferrer')}
-            style={{ cursor: 'pointer', backgroundImage:`${project.image}` }}>
+            style={{ cursor: 'pointer', backgroundImage:`url(${project.image})` }}>
               <h2>{project.name}</h2>
               <p>{project.description}</p>
             </div>

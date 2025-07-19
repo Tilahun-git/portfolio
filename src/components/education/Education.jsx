@@ -17,14 +17,14 @@ const Education = () => {
           <h2>Frontend Development Certification</h2>
           <h4>Coursera</h4>
           <p className="education-date">2025</p>
-          <p>Completed coursework in HTML, CSS, JavaScript,React and Node.js.</p>
+          <p>Completed coursework in HTML, CSS, JavaScript, React, and Node.js.</p>
         </div>
 
         <div className="education-item">
           <h2>Backend Development Certification</h2>
           <h4>Coursera</h4>
           <p className="education-date">2025</p>
-          <p>Completed coursework in Node.js, express.js and MongoDB.</p>
+          <p>Completed coursework in Node.js, Express.js, and MongoDB.</p>
         </div>
 
       </div>

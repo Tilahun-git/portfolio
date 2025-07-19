@@ -9,7 +9,7 @@ const Experience = () => {
         <div className="experience-item">
           <h2>Frontend Developer Intern</h2>
           <h4>Ministry of Innovation and Technology</h4>
-          <p className="experience-date">March 2025 - June 2025</p>
+          <p className="experience-date">March 2025 - June 2025 (Incoming)</p>
           <ul>
             <li>Developed responsive web pages using React.js and Tailwind CSS.</li>
             <li>Collaborated with the backend team to integrate REST APIs.</li>
