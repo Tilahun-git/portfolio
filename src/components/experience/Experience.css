@@ -1,9 +1,8 @@
 /* Experience.css */
 
 .experience-section {
-  padding: 80px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 0;
+  margin: 80px 170px;
   text-align: center;
 }
 
@@ -20,55 +19,20 @@
   gap: 30px;
 }
 
-.experience-item {
-  background-color: #1f1f1f;
-  padding: 30px 25px;
-  border-radius: 15px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  width: 45%;
-  min-width: 300px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  text-align: center;
+.card--experience {
+  width: 320px;
+  min-width: 320px;
 }
 
-.experience-item ul {
+.card--experience ul {
   text-align: left;
-
+  padding-left: 18px;
+  margin: 0;
 }
 
-.experience-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 123, 255, 0.4);
-  border: 2px solid #007bff;
-}
-
-.experience-item h2 {
-  font-size: 28px;
-  color: #fff;
+.card--experience li {
   margin-bottom: 10px;
-}
-
-.experience-item h4 {
-  font-size: 20px;
-  color: #aaa;
-  margin-bottom: 8px;
-}
-
-.experience-date {
-  font-size: 16px;
-  color: #ccc;
-  margin-bottom: 15px;
-}
-
-.experience-item ul {
-  padding-left: 20px;
-}
-
-.experience-item li {
-  font-size: 16px;
   color: #ddd;
-  margin-bottom: 8px;
-  line-height: 1.6;
 }
 
 /* Responsive for Mobile */
@@ -77,33 +41,27 @@
     font-size: 36px;
   }
 
+  .experience-section {
+    margin: 40px 20px;
+    padding: 0;
+  }
+
   .experience-container {
     flex-direction: column;
     align-items: center;
     gap: 20px;
   }
 
-  .experience-item {
+  .card--experience {
     width: 90%;
-    text-align: center;
-    padding: 20px;
   }
 
-  .experience-item h2 {
-    font-size: 24px;
-  }
-
-  .experience-item h4 {
-    font-size: 18px;
-  }
-
-  .experience-date,
-  .experience-item li {
-    font-size: 14px;
-  }
-
-  .experience-item ul {
+  .card--experience ul {
     padding-left: 0;
     list-style-position: inside;
+  }
+
+  .card--experience li {
+    font-size: 14px;
   }
 }

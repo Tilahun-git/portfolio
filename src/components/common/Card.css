@@ -1,0 +1,120 @@
+/* Shared card styling for consistent visuals across sections */
+.card {
+  position: relative;
+  background: rgba(31, 31, 31, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 16px;
+  padding: 28px 26px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.22);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 123, 255, 0.75);
+  box-shadow: 0 16px 34px rgba(0, 123, 255, 0.18);
+}
+
+.card-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.card-subtitle {
+  font-size: 18px;
+  color: #aaa;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.card-meta {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 14px;
+}
+
+.card-text {
+  font-size: 16px;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Project cards: background image with dark overlay for readability */
+.card--project {
+  overflow: hidden;
+  padding: 30px 26px;
+}
+
+.card--project::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--bg);
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.02);
+  filter: saturate(1.1);
+  opacity: 0.95;
+  z-index: 0;
+}
+
+.card--project::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 9, 5, 0.15) 0%,
+    rgba(10, 9, 5, 0.85) 100%
+  );
+  z-index: 1;
+}
+
+.card--project > * {
+  position: relative;
+  z-index: 2;
+}
+
+.card--project .card-title {
+  color: #fff;
+}
+
+.card--project .card-text {
+  color: #f2f2ff;
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+  .card {
+    padding: 20px 16px;
+    border-radius: 14px;
+  }
+
+  .card-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .card-subtitle {
+    font-size: 16px;
+  }
+
+  .card-meta {
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+
+  .card-text {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+

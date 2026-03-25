@@ -1,46 +1,26 @@
-import image from "./logo.jpg"
+import background from "./projectsBackground.avif"
+
 const ProjectData = [
   {
     id: 1,
-    name: "Student Management System",
-    description:"A web-based system to manage student records and performance.",
-    repo: "https://github.com/Tilahun-git/portfolio",
-    image:image,
+    name: "Mini Social Media App",
+    description:"A mini social media app to share posts and to like and comments on each posts.",
+    repo: "https://github.com/Tilahun-git/mini_social_media_app",
+    image:background,  
   },
   {
     id: 2,
-    name: "E-commerce Platform",
-    description: "An online platform for buying and selling products.",
+    name: "Plan Monitoring and Evaluation System",
+    description: "An online platform for monitoring and evaluating plans for a company.",
     repo: "https://github.com/Tilahun-git/intership_project",
-    image:image,
+    image:background,  
   },
   {
     id: 3,
-    name: "Hospital Management System",
-    description:"A system to manage hospital operations, appointments, and billing.",
-    repo: "https://github.com/Tilahun-git/CompilerProject",
-    image:image,
-  },
-  {
-    id: 4,
-    name: "Library Catalog App",
-    description: "A mobile app to browse and manage books in a library.",
-    repo: "https://github.com/Tilahun-git/CompilerProject",
-    image:image,
-  },
-  {
-    id: 5,
-    name: "Online Voting System",
-    description: "A secure platform to conduct and manage elections digitally.",
-    repo: "https://github.com/Tilahun-git/CompilerProject",
-    image:image,
-  },
-  {
-    id: 6,
-    name: "Traffic Control System",
-    description:"A system to manage hospital operations, appointments, and billing.",
-    repo: "https://github.com/Tilahun-git/CompilerProject",
-    image:image,
+    name: "Health Guidance System",
+    description:"A system to get health advices, book appointments, and billing.",
+    repo: "https://github.com/Tilahun-git/health_guidance",
+    image:background,  
   },
 ];
 export default ProjectData;

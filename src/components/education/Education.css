@@ -1,9 +1,8 @@
 /* Education.css */
 
 .education-section {
-  padding: 80px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 0;
+  margin: 80px 170px;
   text-align: center;
 }
 
@@ -20,43 +19,10 @@
   gap: 30px;
 }
 
-.education-item {
-  background-color: #1f1f1f;
-  padding: 30px 25px;
-  border-radius: 15px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  width: 45%;
-  min-width: 300px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.education-item:hover {
-  transform: scale(1.05);
-  border: 2px solid #007bff;
-}
-
-.education-item h2 {
-  font-size: 28px;
-  color: #fff;
-  margin-bottom: 10px;
-}
-
-.education-item h4 {
-  font-size: 20px;
-  color: #aaa;
-  margin-bottom: 8px;
-}
-
-.education-date {
-  font-size: 16px;
-  color: #ccc;
-  margin-bottom: 15px;
-}
-
-.education-item p {
-  font-size: 16px;
-  color: #ddd;
-  line-height: 1.6;
+.card--education {
+  width: 320px;
+  min-width: 320px;
+  background-color: rgba(31, 31, 31, 0.95);
 }
 
 /* Responsive for Mobile */
@@ -65,28 +31,19 @@
     font-size: 36px;
   }
 
+  .education-section {
+    margin: 40px 20px;
+    padding: 0;
+  }
+
   .education-container {
     flex-direction: column;
     align-items: center;
     gap: 20px;
   }
 
-  .education-item {
+  .card--education {
     width: 90%;
     text-align: center;
-    padding: 20px;
-  }
-
-  .education-item h2 {
-    font-size: 24px;
-  }
-
-  .education-item h4 {
-    font-size: 18px;
-  }
-
-  .education-item p,
-  .education-date {
-    font-size: 14px;
   }
 }

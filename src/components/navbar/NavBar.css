@@ -21,6 +21,7 @@
 
 .navbar img {
   height: 70px;
+  margin-left: 50px;
   width: 100px;
   border-radius: 50%;
   transition: transform 0.3s;
