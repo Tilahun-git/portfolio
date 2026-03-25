@@ -131,7 +131,7 @@ border: 2px solid rgb(221, 168, 70);
     .contact{
     align-items: start;
     gap: 50px;
-    margin: 50px 70px;
+    margin: 40px 20px;
 }
 .contact-title h1{
     padding: 0;
@@ -140,6 +140,32 @@ border: 2px solid rgb(221, 168, 70);
 .contact-title img{
     width: 130px;
     margin-right: -20px;
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .contact{
+        margin: 80px 90px;
+        gap: 60px;
+    }
+
+    .contact-title h1{
+        font-size: 60px;
+        padding: 0px 20px;
+    }
+
+    .contact-sections{
+        gap: 90px;
+    }
+
+    .contact-form input{
+        width: 100%;
+        max-width: 650px;
+    }
+
+    .contact-form textarea{
+        width: 100%;
+        max-width: 650px;
+    }
 }
 .contact-sections{
     flex-direction: column;
