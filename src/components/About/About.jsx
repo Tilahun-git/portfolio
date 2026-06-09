@@ -1,71 +1,43 @@
 import "./About.css";
-import theme from "../../assets/theme.jpg";
 import profile from "../../assets/profile.jpg";
 
+const About = () => (
+  <div className="about sec">
+    <div className="sec-header">
+      <h2>About Me</h2>
+      <span className="underline" />
+    </div>
 
-const About = () => {
-  return (
-    <div className="about">
-      <div className="about-title">
-        <h1>About Me</h1>
-        <img src={theme} alt="" />
+    <div className="about-body">
+      <div className="about-left">
+        <img src={profile} alt="Tilahun Tareke" />
       </div>
-      <div className="about-sections">
-        <div className="about-left">
-          <img src={profile} alt="" />
-        </div>
-        <div className="about-right">
-          <div className="about-paragraph">
-            <p>
-              I am an experienced frontend web developer with over two years of experience. I specialize in creating visually stunning and user-friendly web applications, combining creativity with technical expertise.
-            </p> 
-          </div>
-          <div className="about-skills">
-            <div className="about-skill">
-              <p>HTML</p>
-              <hr style={{ width: "95%" }} />
+      <div className="about-right">
+        <p className="about-para">
+          I am an experienced full-stack web developer with over two years of hands-on
+          experience. I specialise in building visually polished, performant, and
+          user-friendly web applications with combining creativity with solid technical depth.
+        </p>
+        <div className="about-bars">
+          {[
+            { label: "HTML",       pct: 95 },
+            { label: "CSS",        pct: 80 },
+            { label: "JavaScript", pct: 94 },
+            { label: "Java",       pct: 90 },
+            { label: "TypeScript", pct: 91 },
+          ].map(({ label, pct }) => (
+            <div className="bar-row" key={label}>
+              <span className="bar-label">{label}</span>
+              <div className="bar-track">
+                <div className="bar-fill" style={{ width: `${pct}%` }} />
+              </div>
+              <span className="bar-pct">{pct}%</span>
             </div>
-            <div className="about-skill">
-              <p>CSS</p>
-              <hr style={{ width: "60%" }} />
-            </div>
-            <div className="about-skill">
-              <p>JAVA SCRIPT </p>
-              <hr style={{ width: "80%" }} />
-            </div>
-            <div className="about-skill">
-              <p>REACT JS</p> 
-              <hr style={{ width: "75%" }} />
-            </div>
-            <div className="about-skill">
-              <p>JAVA </p>
-              <hr style={{ width: "90%" }} />
-            </div>
-            <div className="about-skill">
-              <p>TYPESCRIPT </p>
-              <hr style={{ width: "45%" }} />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="about-achievements">
-        <div className="about-achievement">
-          <h1>2+</h1>
-          <p>Years of Experience</p>
-        </div>
-        <hr />
-        <div className="about-achievement">
-          <h1>10+</h1>
-          <p>Projects Completed</p>
-        </div>
-        <hr />
-        <div className="about-achievement">
-          <h1>10+</h1>
-          <p>Happy Clients </p>
+          ))}
         </div>
       </div>
     </div>
-  );
-};
+  </div>
+);
 
 export default About;

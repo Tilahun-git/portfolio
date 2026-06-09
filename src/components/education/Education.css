@@ -1,87 +1,18 @@
-/* Education.css */
-
-.education-section {
-  padding: 0;
-  margin: 80px 170px;
+/* ── Education ───────────────────────────────────────────────── */
+.education-sec {
   text-align: center;
 }
 
-.section-title {
-  font-size: 50px;
-  margin-bottom: 50px;
-  color: #fff;
-}
-
-.education-container {
+.edu-grid {
   display: grid;
-  grid-template-columns: repeat(3, 320px);
-  justify-content: center;
-  gap: 60px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 980px;
+  margin: 0 auto;
 }
 
-.card--education {
-  width: 320px;
-  min-width: 320px;
-  background-color: rgba(31, 31, 31, 0.95);
-}
-
-/* Responsive for Mobile */
-@media (max-width: 768px) {
-  .section-title {
-    font-size: 36px;
-  }
-
-  .education-section {
-    margin: 40px 20px;
-    padding: 0;
-  }
-
-  .education-container {
+@media (max-width: 600px) {
+  .edu-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .card--education {
-    width: 90%;
-    text-align: center;
-  }
-}
-
-/* Small tablets */
-@media (min-width: 769px) and (max-width: 880px) {
-  .education-section {
-    margin: 60px 20px;
-  }
-
-  .section-title {
-    font-size: 40px;
-    margin-bottom: 30px;
-  }
-
-  .education-container {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .card--education {
-    width: 90%;
-    min-width: 0;
-  }
-}
-
-/* Large tablets */
-@media (min-width: 881px) and (max-width: 1200px) {
-  .education-section {
-    margin: 80px 90px;
-  }
-
-  .section-title {
-    font-size: 44px;
-    margin-bottom: 40px;
-  }
-
-  .education-container {
-    grid-template-columns: repeat(2, 320px);
-    gap: 40px;
   }
 }

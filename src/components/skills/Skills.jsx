@@ -1,50 +1,73 @@
-import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaGithub, FaFigma } from 'react-icons/fa';
-import { SiTailwindcss, SiMongodb, SiPostman, SiExpress } from 'react-icons/si';
-import theme from "../../assets/theme.jpg";
+import {
+  FaHtml5, FaCss3Alt, FaJsSquare, FaReact,
+  FaNodeJs, FaGithub, FaFigma,
+} from 'react-icons/fa';
+import {
+  SiTailwindcss, SiMongodb, SiPostman, SiExpress,
+  SiNextdotjs, SiPostgresql, SiSpringboot,
+} from 'react-icons/si';
 import Card from "../common/Card";
 import './Skills.css';
 
-const Skills = () => {
-  return (
-    <section id="skills" className="skills-section">
-      <div className="skills-title">
-              <h1>My Skills</h1>
-              <img src={theme} alt="" />
-       </div>
-      <div className="skills-container">
+const CARDS = [
+  {
+    title: "Frontend",
+    skills: [
+      { icon: <FaHtml5 className="si html" />,           label: "HTML5"        },
+      { icon: <FaCss3Alt className="si css" />,          label: "CSS3"         },
+      { icon: <SiTailwindcss className="si tailwind" />, label: "Tailwind CSS" },
+      { icon: <FaJsSquare className="si js" />,          label: "JavaScript"   },
+      { icon: <FaReact className="si react" />,          label: "React.js"     },
+      { icon: <SiNextdotjs className="si nextjs" />,     label: "Next.js"      },
+    ],
+  },
+  {
+    title: "Backend",
+    skills: [
+      { icon: <FaNodeJs className="si node" />,           label: "Node.js"     },
+      { icon: <SiExpress className="si express" />,       label: "Express.js"  },
+      { icon: <SiSpringboot className="si springboot" />, label: "Spring Boot" },
+    ],
+  },
+  {
+    title: "Databases",
+    skills: [
+      { icon: <SiMongodb className="si mongo" />,       label: "MongoDB"    },
+      { icon: <SiPostgresql className="si postgres" />, label: "PostgreSQL" },
+    ],
+  },
+  {
+    title: "Tools",
+    skills: [
+      { icon: <FaGithub className="si github" />,   label: "Git & GitHub" },
+      { icon: <FaFigma className="si figma" />,     label: "Figma"        },
+      { icon: <SiPostman className="si postman" />, label: "Postman"      },
+    ],
+  },
+];
 
-        <Card className="card--skills">
-          <h2 className="card-title">Frontend</h2>
-          <div className="card-body skills-list">
-            <div className="skill-item"><FaHtml5 className="skill-icon html" /> HTML5</div>
-            <div className="skill-item"><FaCss3Alt className="skill-icon css" /> CSS3</div>
-            <div className="skill-item"><SiTailwindcss className="skill-icon tailwind" /> Tailwind CSS</div>
-            <div className="skill-item"><FaJsSquare className="skill-icon js" /> JavaScript</div>
-            <div className="skill-item"><FaReact className="skill-icon react" /> React.js</div>
+const Skills = () => (
+  <div className="skills-sec sec">
+    <div className="sec-header">
+      <h2>My Skills</h2>
+      <span className="underline" />
+    </div>
+    <div className="skills-grid">
+      {CARDS.map(({ title, skills }) => (
+        <Card key={title}>
+          <h3 className="skill-card-title">{title}</h3>
+          <div className="skill-list">
+            {skills.map(({ icon, label }) => (
+              <div className="skill-item" key={label}>
+                {icon}
+                <span>{label}</span>
+              </div>
+            ))}
           </div>
         </Card>
-
-        <Card className="card--skills">
-          <h2 className="card-title">Backend</h2>
-          <div className="card-body skills-list">
-            <div className="skill-item"><FaNodeJs className="skill-icon node" /> Node.js</div>
-            <div className="skill-item"><SiExpress className="skill-icon express" /> Express.js</div>
-            <div className="skill-item"><SiMongodb className="skill-icon mongo" /> MongoDB</div>
-          </div>
-        </Card>
-
-        <Card className="card--skills">
-          <h2 className="card-title">Tools and Technologies</h2>
-          <div className="card-body skills-list">
-            <div className="skill-item"><FaGithub className="skill-icon github" /> Git & GitHub</div>
-            <div className="skill-item"><FaFigma className="skill-icon figma" /> Figma</div>
-            <div className="skill-item"><SiPostman className="skill-icon postman" /> Postman</div>
-          </div>
-        </Card>
-
-      </div>
-    </section>
-  );
-};
+      ))}
+    </div>
+  </div>
+);
 
 export default Skills;

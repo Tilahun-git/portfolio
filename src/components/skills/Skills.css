@@ -1,162 +1,80 @@
-.skills-section {
-  margin: 80px 170px;
+/* ── Skills section ──────────────────────────────────────────── */
+.skills-sec {
   text-align: center;
 }
 
-.skills-title {
-  position: relative;
-}
-
-.skills-title h1 {
-  font-size: 80px;
-  margin-bottom: 30px;
-  padding: 0px 30px;
-  font-weight: 600;
-}
-
-.skills-title img {
-  bottom: 0;
-  z-index: -1;
-  position: absolute;
-}
-
-.skills-container {
+.skills-grid {
   display: grid;
-  grid-template-columns: repeat(3, 320px);
-  justify-content: center;
-  gap: 60px;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 980px;
+  margin: 0 auto;
 }
 
-.skills-list {
+/* ── Skill card header ───────────────────────────────────────── */
+.skill-card-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  margin-bottom: 14px;
+}
+
+/* ── Skill items ─────────────────────────────────────────────── */
+.skill-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-}
-
-.card--skills {
-  background-color: #333;
-  width: 320px;
-  min-width: 320px;
-}
-
-.card--skills .card-title {
-  margin-bottom: 16px;
+  gap: 6px;
 }
 
 .skill-item {
   display: flex;
   align-items: center;
-  font-size: 17.6px; /* 1.1rem */
-  color: #fff;
-  cursor: pointer;
-  transition: color 0.3s ease;
+  gap: 10px;
+  font-size: var(--text-base);  /* 16px */
+  color: var(--text-main);
+  padding: 7px 9px;
+  border-radius: 8px;
+  transition: background 0.18s ease, transform 0.18s ease;
 }
 
 .skill-item:hover {
-  color: #007bff;
+  background: var(--hover-tint);
+  transform: translateX(3px);
 }
 
-.skill-icon {
-  margin-right: 10px;
-  font-size: 24px; 
+.si {
+  font-size: 1.25rem;
+  flex-shrink: 0;
 }
 
-/* Colors for the specific Icons */
-.html { color: #e34c26; }
-.css { color: #264de4; }
-.js { color: #f0db4f; }
-.react { color: #61dafb; }
-.node { color: #68a063; }
-.mongo { color: #4db33d; }
-.tailwind { color: #06b6d4; }
-.github { color: #fff; }
-.figma { color: #a259ff; }
-.postman { color: #ff6c37; }
-.express { color: #fff; }
+/* Icon colours */
+.html       { color: #e34c26; }
+.css        { color: #264de4; }
+.js         { color: #f0db4f; }
+.react      { color: #61dafb; }
+.nextjs     { color: var(--text-main); }
+.node       { color: #68a063; }
+.springboot { color: #6db33f; }
+.express    { color: var(--text-muted); }
+.mongo      { color: #4db33d; }
+.postgres   { color: #336791; }
+.tailwind   { color: #06b6d4; }
+.github     { color: var(--text-main); }
+.figma      { color: #a259ff; }
+.postman    { color: #ff6c37; }
 
-/* Responsive Design for Mobile */
-@media (max-width: 768px) {
-  .skills-section {
-    margin: 40px 20px;
+/* ── Responsive ──────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .skills-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
   }
-  .section-title {
-    font-size: 32px; 
-  }
+}
 
-  .skills-title img {
-    width: 130px;
-  }
-
-  .skills-title h1 {
-    padding: 0px 30px;
-    font-weight: 600;
-    font-size: 40px;
-  }
-
-  .skills-container {
+@media (max-width: 400px) {
+  .skills-grid {
     grid-template-columns: 1fr;
-    justify-content: center;
-    gap: 20px;
-  }
-
-  .skill-category h2 {
-    font-size: 21px; 
-  }
-
-  .skill-item {
-    font-size: 16px; 
-  }
-
-  .skill-icon {
-    margin-right: 10px;
-    font-size: 29px; 
-  }
-
-  .card--skills {
-    width: 90%;
-    min-width: 0;
   }
 }
-
-/* Small tablets */
-@media (min-width: 769px) and (max-width: 880px) {
-  .skills-section {
-    margin: 60px 20px;
-  }
-
-  .skills-title h1 {
-    font-size: 50px;
-    margin-bottom: 20px;
-  }
-
-  .skills-container {
-    grid-template-columns: 1fr;
-    justify-content: center;
-    gap: 20px;
-  }
-
-  .card--skills {
-    width: 90%;
-    min-width: 0;
-  }
-}
-
-/* Large tablets */
-@media (min-width: 881px) and (max-width: 1200px) {
-  .skills-section {
-    margin: 80px 90px;
-  }
-
-  .skills-title h1 {
-    font-size: 60px;
-    margin-bottom: 20px;
-  }
-
-  .skills-container {
-    grid-template-columns: repeat(2, 320px);
-    gap: 40px;
-  }
-}
-
-
-

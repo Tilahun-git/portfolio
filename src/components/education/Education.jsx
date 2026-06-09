@@ -1,36 +1,44 @@
 import Card from "../common/Card";
 import "./Education.css";
 
-const Education = () => {
-  return (
-    <section id="education" className="education-section">
-      <h1 className="section-title">Education</h1>
-      <div className="education-container">
+const items = [
+  {
+    title: "BSc in Software Engineering",
+    subtitle: "Woldia University",
+    meta: "2022 – Present",
+    text: "Focused on web development, software design, and system architecture.",
+  },
+  {
+    title: "Frontend Development Certification",
+    subtitle: "Coursera",
+    meta: "2025",
+    text: "Completed coursework in HTML, CSS, JavaScript, React, and Next.js.",
+  },
+  {
+    title: "Backend Development Certification",
+    subtitle: "Coursera",
+    meta: "2025",
+    text: "Completed coursework in Node.js, Express.js, and MongoDB.",
+  },
+];
 
-        <Card className="card--education">
-          <h2 className="card-title">Bachelor of Science in Software Engineering</h2>
-          <h4 className="card-subtitle">Woldia University</h4>
-          <p className="card-meta">2022 - present</p>
-          <p className="card-text">Focused on web development, software design, and system architecture.</p>
+const Education = () => (
+  <div className="sec education-sec">
+    <div className="sec-header">
+      <h2>Education</h2>
+      <span className="underline" />
+    </div>
+    <div className="edu-grid">
+      {items.map(({ title, subtitle, meta, text }) => (
+        <Card key={title}>
+          <h3 className="card-title">{title}</h3>
+          <p className="card-subtitle">{subtitle}</p>
+          <p className="card-meta">{meta}</p>
+          <p className="card-text">{text}</p>
         </Card>
-
-        <Card className="card--education">
-          <h2 className="card-title">Frontend Development Certification</h2>
-          <h4 className="card-subtitle">Coursera</h4>
-          <p className="card-meta">2025</p>
-          <p className="card-text">Completed coursework in HTML, CSS, JavaScript, React, and Next.js.</p>
-        </Card>
-
-        <Card className="card--education">
-          <h2 className="card-title">Backend Development Certification</h2>
-          <h4 className="card-subtitle">Coursera</h4>
-          <p className="card-meta">2025</p>
-          <p className="card-text">Completed coursework in Node.js, Express.js, and MongoDB.</p>
-        </Card>
-
-      </div>
-    </section>
-  );
-};
+      ))}
+    </div>
+  </div>
+);
 
 export default Education;

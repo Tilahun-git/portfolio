@@ -1,33 +1,72 @@
-import React from 'react';
 import './Footer.css';
-import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 
-const Footer = () => {
-  return (
-    <footer className="footer">
-      <div className="footer-container">
-        <div className="footer-section">
-          <h3 className="footer-title">Contact</h3>
-          <p>Email: <a href="mailto:tilahuntareke8@gmail.com" className="footer-email">tilahuntareke8@gmail.com</a></p>
-          <p>Location: Addis Ababa, Ethiopia</p>
+const NAV = [
+  { href: '#home',       label: 'Home'       },
+  { href: '#about',      label: 'About'      },
+  { href: '#skills',     label: 'Skills'     },
+  { href: '#education',  label: 'Education'  },
+  { href: '#experience', label: 'Experience' },
+  { href: '#projects',   label: 'Projects'   },
+  { href: '#contact',    label: 'Contact'    },
+];
+
+const Footer = () => (
+  <footer className="footer">
+    <div className="footer-top">
+
+      {/* Brand column */}
+      <div className="footer-brand">
+        <span className="footer-name">Tilahun Tareke</span>
+        <p className="footer-tagline">
+          Full-Stack Web Developer &amp; Freelancer based in Addis Ababa, Ethiopia.
+          Building performant, accessible web experiences.
+        </p>
+        <div className="footer-socials">
+          <a href="https://linkedin.com/in/tilahun" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+            <FaLinkedin />
+          </a>
+          <a href="https://github.com/Tilahun-git" target="_blank" rel="noreferrer" aria-label="GitHub">
+            <FaGithub />
+          </a>
+          <a href="mailto:tilahuntareke8@gmail.com" aria-label="Email">
+            <FaEnvelope />
+          </a>
         </div>
+      </div>
 
-        <div className="footer-section">
-          <h3 className="footer-title">Connect with me</h3>
-          <div className="footer-icons">
-            <a href="https://linkedin.com/in/tilahun" target="_blank" rel="noreferrer" aria-label="LinkedIn"><FaLinkedin /></a>
-            <a href="https://github.com/Tilahun-git" target="_blank" rel="noreferrer" aria-label="GitHub"><FaGithub /></a>
-            <a href="mailto:tilahuntareke8@gmail.com" target="_blank" rel="noreferrer" aria-label="Email"><FaEnvelope /></a>
+      {/* Quick links */}
+      <div className="footer-col">
+        <h4 className="footer-col-title">Quick Links</h4>
+        <nav className="footer-nav">
+          {NAV.map(({ href, label }) => (
+            <a key={href} href={href} className="footer-nav-link">{label}</a>
+          ))}
+        </nav>
+      </div>
+
+      {/* Contact info */}
+      <div className="footer-col">
+        <h4 className="footer-col-title">Contact</h4>
+        <div className="footer-contact-list">
+          <a href="mailto:tilahuntareke8@gmail.com" className="footer-contact-row">
+            <FaEnvelope className="footer-contact-icon" />
+            <span>tilahuntareke8@gmail.com</span>
+          </a>
+          <div className="footer-contact-row">
+            <FaMapMarkerAlt className="footer-contact-icon" />
+            <span>Addis Ababa, Ethiopia</span>
           </div>
         </div>
       </div>
 
-      <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} Tilahun Tareke. All rights reserved.</p>
-        <a href="/privacy" className="footer-link">Privacy Policy</a>
-      </div>
-    </footer>
-  );
-};
+    </div>
+
+    <div className="footer-bottom">
+      <span>© {new Date().getFullYear()} Tilahun Tareke. All rights reserved.</span>
+      <span className="footer-made">Built with React &amp; Vite</span>
+    </div>
+  </footer>
+);
 
 export default Footer;

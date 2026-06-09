@@ -1,17 +1,14 @@
-import React from 'react'
-import './Contact.css'
-import theme from "../../assets/theme.jpg";
-import locationIcon from '../../assets/location-icon.png'
-import emailIcon from '../../assets/email-icon.png'
-import callIcon from '../../assets/call-icon.png'
-
-
+import React from "react";
+import "./Contact.css";
+import locationIcon from "../../assets/location-icon.png";
+import emailIcon from "../../assets/email-icon.png";
+import callIcon from "../../assets/call-icon.png";
 
 const Contact = () => {
-    const [status, setStatus] = React.useState("");
-    const [loading, setLoading] = React.useState(false);
+  const [status, setStatus] = React.useState("");
+  const [loading, setLoading] = React.useState(false);
 
-    const onSubmit = async (event) => {
+  const onSubmit = async (event) => {
     event.preventDefault();
     setStatus("");
     setLoading(true);
@@ -25,22 +22,18 @@ const Contact = () => {
 
     formData.append("access_key", import.meta.env.VITE_WEB3FORMS_ACCESS_KEY);
 
-    const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
+    const json = JSON.stringify(Object.fromEntries(formData));
 
     try {
       const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json"
-        },
-        body: json
-      }).then((res) => res.json());
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: json,
+      }).then((r) => r.json());
 
       if (res.success) {
         setStatus("Thank you! Your message has been sent.");
-        event.target.reset();   
+        event.target.reset();
       } else {
         setStatus(res.message || "Something went wrong. Please try again later.");
       }
@@ -49,37 +42,66 @@ const Contact = () => {
     }
     setLoading(false);
   };
+
   return (
-    <div className="contact">
-      <div className="contact-title">
-        <h1 className="">Get in Touch</h1>
-        <img src={theme} alt="Contact section background pattern" className="" />
+    <div className="sec contact-sec">
+      <div className="sec-header">
+        <h2>Get in Touch</h2>
+        <span className="underline" />
       </div>
-      <div className="contact-sections">
-       <div className="contact-one">
-          <h1>Let's talk</h1>
-          <p>I am currently available to take part in new projects</p>
+
+      <div className="contact-body">
+        {/* ── Left info ── */}
+        <div className="contact-info">
+          <h3 className="contact-subhead">Let's talk</h3>
+          <p className="contact-blurb">
+            I'm currently available for new projects and collaborations.
+          </p>
           <div className="contact-details">
-          <div className="contact-detail"><img src={emailIcon} alt="Email icon" /><p className='email'>tilahuntareke8@gmail.com</p></div>
-          <div className="contact-detail"><img src={callIcon} alt="Call icon" /><p className='phone'>+251983898486</p></div>
-          <div className="contact-detail"><img src={locationIcon} alt="Location icon" /><p className='location'>Addis Ababa, Ethiopia</p></div>
+            {[
+              { icon: emailIcon,    alt: "Email",    text: "tilahuntareke8@gmail.com" },
+              { icon: callIcon,     alt: "Phone",    text: "+251 983 898 486"         },
+              { icon: locationIcon, alt: "Location", text: "Addis Ababa, Ethiopia"    },
+            ].map(({ icon, alt, text }) => (
+              <div className="contact-row" key={alt}>
+                <img src={icon} alt={alt} />
+                <span>{text}</span>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+
+        {/* ── Form ── */}
         <form onSubmit={onSubmit} className="contact-form" autoComplete="off">
-            <label htmlFor="name" className="">Your Name</label><br />
-            <input type="text" placeholder='Enter your name' name ="name" autoComplete='off' required/><br/>
-            <label htmlFor="email" className="">Email</label><br/>
-            <input type="email" placeholder='Enter your email' name ="email"  autoComplete='off' required/><br/>
-            <label htmlFor="message" className="">Write Your Message </label><br/>
-            <textarea name="comment" placeholder="Write your comment" rows={10} required></textarea><br/>
-            {/* Honeypot field (hidden from users)  used for detection of bots*/}
-            <input type="text" name="website" style={{ display: 'none' }} tabIndex="-1" autoComplete="off" />
-            <button type ="submit" disabled={loading}>{loading ? "Sending..." : "Submit"}</button>
-            <div aria-live="polite" style={{ minHeight: 24, color: status.includes('Thank you') ? 'green' : 'red', marginTop: 8 }}>{status}</div>
+          <div className="form-group">
+            <label htmlFor="name">Your Name</label>
+            <input id="name" type="text" placeholder="Enter your name" name="name" autoComplete="off" required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="email">Email</label>
+            <input id="email" type="email" placeholder="Enter your email" name="email" autoComplete="off" required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="message">Message</label>
+            <textarea id="message" name="comment" placeholder="Write your message…" rows={5} required />
+          </div>
+
+          {/* Honeypot */}
+          <input type="text" name="website" style={{ display: "none" }} tabIndex="-1" autoComplete="off" />
+
+          <button type="submit" disabled={loading}>
+            {loading ? "Sending…" : "Send Message"}
+          </button>
+
+          {status && (
+            <p className={`form-status ${status.includes("Thank you") ? "success" : "error"}`}>
+              {status}
+            </p>
+          )}
         </form>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

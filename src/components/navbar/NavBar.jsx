@@ -1,48 +1,72 @@
 import { useEffect, useState } from 'react';
 import './NavBar.css';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes, FaSun, FaMoon } from 'react-icons/fa';
 import logo from '../../assets/logo.jpg';
+import { useTheme } from '../../context/ThemeContext';
 
 const NavBar = () => {
-const [activeSection, setActiveSection] = useState('#home');
+  const [activeSection, setActiveSection] = useState('#home');
   const [menuOpen, setMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
-    const sections = document.querySelectorAll('section'); 
+    const sections = document.querySelectorAll('section');
 
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setActiveSection(`#${entry.target.id}`); 
+            setActiveSection(`#${entry.target.id}`);
           }
         });
       },
-      { threshold: 0.6 } 
+      { threshold: 0.4 }
     );
 
-    sections.forEach(section => observer.observe(section));
-
-    return () => {
-      sections.forEach(section => observer.unobserve(section));
-    };
+    sections.forEach((s) => observer.observe(s));
+    return () => sections.forEach((s) => observer.unobserve(s));
   }, []);
 
   return (
-    <div className='navbar'>
-      <a href="#home"><img src={logo} alt="Logo" /></a>
+    <div className="navbar">
+      <a href="#home">
+        <img src={logo} alt="Logo" className="navbar-logo" />
+      </a>
 
       <ul className={`nav-menu ${menuOpen ? 'show' : ''}`}>
-        <li><a href="#home" className={`link ${activeSection === '#home' ? 'active' : ''}`}>Home</a></li>
-        <li><a href="#about" className={`link ${activeSection === '#about' ? 'active' : ''}`}>About</a></li>
-        <li><a href="#skills" className={`link ${activeSection === '#skills' ? 'active' : ''}`}>Skills</a></li>
-        <li><a href="#education" className={`link ${activeSection === '#education' ? 'active' : ''}`}>Education</a></li>
-        <li><a href="#experience" className={`link ${activeSection === '#experience' ? 'active' : ''}`}>Experiences</a></li>
-        <li><a href="#projects" className={`link ${activeSection === '#projects' ? 'active' : ''}`}>Projects</a></li>
-        <li><a href="#contact" className={`link ${activeSection === '#contact' ? 'active' : ''}`}>Contact</a></li>
+        {[
+          ['#home',       'Home'],
+          ['#about',      'About'],
+          ['#skills',     'Skills'],
+          ['#education',  'Education'],
+          ['#experience', 'Experience'],
+          ['#projects',   'Projects'],
+          ['#contact',    'Contact'],
+        ].map(([href, label]) => (
+          <li key={href}>
+            <a
+              href={href}
+              className={`link ${activeSection === href ? 'active' : ''}`}
+              onClick={() => setMenuOpen(false)}
+            >
+              {label}
+            </a>
+          </li>
+        ))}
       </ul>
-       <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
-        {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+
+      <div className="navbar-right">
+        <button
+          className="theme-toggle"
+          onClick={toggleTheme}
+          aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+        >
+          {theme === 'dark' ? <FaSun size={17} /> : <FaMoon size={17} />}
+        </button>
+
+        <div className="hamburger" onClick={() => setMenuOpen((o) => !o)}>
+          {menuOpen ? <FaTimes size={22} /> : <FaBars size={22} />}
+        </div>
       </div>
     </div>
   );
