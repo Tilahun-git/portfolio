@@ -1,5 +1,5 @@
+/* ── Hero ────────────────────────────────────────────────────── */
 .hero {
-
   display: flex;
   align-items: center;
   padding: 120px var(--section-x) 72px;
@@ -15,10 +15,11 @@
   margin: 0 auto;
 }
 
+/* ── Copy ────────────────────────────────────────────────────── */
 .hero-copy {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   flex: 1;
 }
 
@@ -45,49 +46,108 @@
   -webkit-text-fill-color: transparent;
 }
 
-.hero-copy .tagline {
+.hero-title-label {
   font-size: var(--text-lg);
-  font-weight: 400;
-  color: var(--text-muted);
-  margin-top: 2px;
-}
-
-.resume-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 22px;
-  padding: 11px 30px;
-  font-size: var(--text-base);
   font-weight: 600;
   color: var(--text-main);
-  background: transparent;
+}
+
+.hero-value {
+  font-size: var(--text-base);
+  color: var(--text-body);
+  line-height: 1.75;
+  max-width: 500px;
+}
+
+/* ── Meta badges ─────────────────────────────────────────────── */
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.hero-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  background: var(--surface);
+  border: 1px solid var(--card-border);
+  border-radius: 999px;
+  padding: 4px 12px;
+}
+
+.hero-meta-icon {
+  color: var(--accent-2);
+  font-size: 0.8rem;
+}
+
+/* ── CTA buttons ─────────────────────────────────────────────── */
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 11px 26px;
+  border-radius: 50px;
+  font-size: var(--text-base);
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.22s ease, box-shadow 0.22s ease,
+              background 0.22s ease, color 0.22s ease, border-color 0.22s ease;
+  cursor: pointer;
+}
+
+/* Filled — Hire Me */
+.hero-btn--primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #fff;
   border: 2px solid transparent;
-  /* Gradient border via background-clip trick */
+  box-shadow: 0 4px 18px rgba(162, 89, 255, 0.28);
+}
+.hero-btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(162, 89, 255, 0.42);
+}
+
+/* Outline — View Projects */
+.hero-btn--outline {
+  background: transparent;
+  color: var(--text-main);
+  border: 2px solid transparent;
   background-image: linear-gradient(var(--bg), var(--bg)),
                     linear-gradient(135deg, var(--accent), var(--accent-2));
   background-origin: border-box;
   background-clip: padding-box, border-box;
-  border-radius: 50px;
-  text-decoration: none;
-  width: fit-content;
-  transition: background-image 0.25s ease, transform 0.22s ease,
-              box-shadow 0.22s ease, color 0.22s ease;
-  box-shadow: 0 2px 12px rgba(162, 89, 255, 0.18);
 }
-
-.resume-btn:hover {
+.hero-btn--outline:hover {
   background-image: linear-gradient(135deg, var(--accent), var(--accent-2)),
                     linear-gradient(135deg, var(--accent), var(--accent-2));
   color: #fff;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(162, 89, 255, 0.38);
 }
 
-.resume-btn:active {
-  transform: translateY(0);
+/* Ghost — Resume */
+.hero-btn--ghost {
+  background: transparent;
+  color: var(--text-muted);
+  border: 2px solid var(--border);
+}
+.hero-btn--ghost:hover {
+  border-color: var(--text-muted);
+  color: var(--text-main);
+  transform: translateY(-2px);
 }
 
+/* ── Profile image ───────────────────────────────────────────── */
 .hero-img {
   width: clamp(200px, 22vw, 280px);
   height: clamp(200px, 22vw, 280px);
@@ -98,34 +158,36 @@
   box-shadow: 0 0 32px rgba(162, 89, 255, 0.15);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
-
 .hero-img:hover {
   transform: scale(1.04);
   box-shadow: 0 0 48px rgba(162, 89, 255, 0.28);
 }
 
+/* ── Mobile ──────────────────────────────────────────────────── */
 @media (max-width: 768px) {
   .hero {
     padding: 100px 20px 56px;
   }
-
   .hero-inner {
     flex-direction: column-reverse;
     align-items: center;
     gap: 24px;
     text-align: center;
   }
-
   .hero-img {
     width: 148px;
     height: 148px;
   }
-
   .hero-copy {
     align-items: center;
   }
-
-  .resume-btn {
-    margin-top: 14px;
+  .hero-value {
+    max-width: 100%;
+  }
+  .hero-meta {
+    justify-content: center;
+  }
+  .hero-cta {
+    justify-content: center;
   }
 }

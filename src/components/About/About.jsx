@@ -1,6 +1,13 @@
 import "./About.css";
 import profile from "../../assets/profile.png";
 
+const HIGHLIGHTS = [
+  { label: "Specialization", value: "Full-Stack Web Development (React, Next.js, Spring Boot, Node.js)" },
+  { label: "Experience",     value: "3+ years building production web applications" },
+  { label: "Industries",     value: "Education, Healthcare, Government, Startups" },
+  { label: "Philosophy",     value: "Clean code, intuitive UX, and solutions that solve real business problems" },
+];
+
 const About = () => (
   <div className="about sec">
     <div className="sec-header">
@@ -12,30 +19,42 @@ const About = () => (
       <div className="about-left">
         <img src={profile} alt="Tilahun Tareke" loading="lazy" />
       </div>
+
       <div className="about-right">
         <p className="about-para">
-          I am an experienced full-stack web developer with over two years of hands-on
-          experience. I specialise in building visually polished, performant, and
-          user-friendly web applications with combining creativity with solid technical depth.
+          I'm a Full-Stack Web Developer specialising in modern JavaScript and Java technologies 
+          including React, Next.js, Node.js, Spring Boot, and PostgreSQL.
         </p>
-        <div className="about-bars">
-          {[
-            { label: "HTML",       pct: 95 },
-            { label: "CSS",        pct: 80 },
-            { label: "JavaScript", pct: 94 },
-            { label: "Java",       pct: 90 },
-            { label: "TypeScript", pct: 91 },
-          ].map(({ label, pct }) => (
-            <div className="bar-row" key={label}>
-              <span className="bar-label">{label}</span>
-              <div className="bar-track">
-                <div className="bar-fill" style={{ width: `${pct}%` }} />
-              </div>
-              <span className="bar-pct">{pct}%</span>
+        <p className="about-para">
+          I help startups, businesses, and entrepreneurs build fast, scalable, and user-friendly
+          web applications. My focus is writing clean, maintainable code and creating intuitive
+          user experiences that deliver real business value.
+        </p>
+
+        <div className="about-highlights">
+          {HIGHLIGHTS.map(({ label, value }) => (
+            <div className="about-highlight-row" key={label}>
+              <span className="about-highlight-label">{label}</span>
+              <span className="about-highlight-value">{value}</span>
             </div>
           ))}
         </div>
       </div>
+    </div>
+    <div className="about-stats">
+      {[
+        { num: "5+",   label: "Projects Completed" },
+        { num: "3+",   label: "Years Experience"    },
+        { num: "100%", label: "Remote Friendly"     },
+      ].map(({ num, label }, i, arr) => (
+        <>
+          <div className="stat" key={label}>
+            <strong>{num}</strong>
+            <span>{label}</span>
+          </div>
+          {i < arr.length - 1 && <div className="stat-divider" key={`d${i}`} />}
+        </>
+      ))}
     </div>
   </div>
 );

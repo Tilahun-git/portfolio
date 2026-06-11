@@ -1,25 +1,30 @@
-import Card from "../common/Card";
 import "./Experience.css";
 
 const items = [
   {
-    title: "Frontend Developer Intern",
-    subtitle: "Ministry of Innovation and Technology",
-    meta: "March 2025 – June 2025",
-    points: [
-      "Developed responsive web pages using React.js and Tailwind CSS.",
-      "Collaborated with the backend team to integrate REST APIs.",
-      "Participated in daily Agile standups and sprint reviews.",
+    role: "Full-Stack Developer",
+    type: "Freelance",
+    company: "Self-Employed",
+    period: "January 2023 – Present",
+    desc: "Developed custom web applications for startups, small businesses, and individual clients.",
+    achievements: [
+      "Built full-stack apps with React, Node.js, and Spring Boot",
+      "Delivered 5+ production projects on time and within budget",
+      "Worked directly with clients to translate ideas into working products",
+      "Deployed applications on Render, Netlify, and GitHub Pages",
     ],
   },
   {
-    title: "Freelance Web Developer",
-    subtitle: "Self-Employed",
-    meta: "January 2023 – Present",
-    points: [
-      "Built personal and client websites using modern web technologies.",
-      "Worked closely with clients to meet design and functional requirements.",
-      "Deployed projects using GitHub Pages and Netlify.",
+    role: "Frontend Developer Intern",
+    type: "Internship",
+    company: "Ministry of Innovation and Technology",
+    period: "March 2025 – June 2025",
+    desc: "Contributed to enterprise-level web application development within an Agile team.",
+    achievements: [
+      "Built responsive UI components with React.js and Tailwind CSS",
+      "Integrated REST APIs developed by the backend team",
+      "Participated in daily standups, sprint planning, and code reviews",
+      "Improved page load performance by optimising component rendering",
     ],
   },
 ];
@@ -30,18 +35,29 @@ const Experience = () => (
       <h2>Experience</h2>
       <span className="underline" />
     </div>
-    <div className="exp-grid">
-      {items.map(({ title, subtitle, meta, points }) => (
-        <Card key={title}>
-          <h3 className="card-title">{title}</h3>
-          <p className="card-subtitle">{subtitle}</p>
-          <p className="card-meta">{meta}</p>
-          <ul className="exp-list">
-            {points.map((pt) => (
-              <li key={pt}>{pt}</li>
-            ))}
-          </ul>
-        </Card>
+    <div className="exp-timeline">
+      {items.map(({ role, type, company, period, desc, achievements }) => (
+        <article className="exp-item" key={role + company}>
+          <div className="exp-item-dot" />
+          <div className="exp-item-body">
+            <div className="exp-item-header">
+              <div>
+                <h3 className="exp-role">{role}</h3>
+                <p className="exp-company">
+                  {company}
+                  <span className="exp-type-badge">{type}</span>
+                </p>
+              </div>
+              <span className="exp-period">{period}</span>
+            </div>
+            <p className="exp-desc">{desc}</p>
+            <ul className="exp-achievements">
+              {achievements.map((a) => (
+                <li key={a}>{a}</li>
+              ))}
+            </ul>
+          </div>
+        </article>
       ))}
     </div>
   </div>
