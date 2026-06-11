@@ -1,7 +1,5 @@
-/* ── Hero ─────────────────────────────────────────────────────── */
 .hero {
-  /* Remove min-height:100vh — it's the main cause of the huge gap.
-     Use explicit padding to centre content without wasting screen space. */
+
   display: flex;
   align-items: center;
   padding: 120px var(--section-x) 72px;
@@ -17,7 +15,6 @@
   margin: 0 auto;
 }
 
-/* ── Left copy ───────────────────────────────────────────────── */
 .hero-copy {
   display: flex;
   flex-direction: column;
@@ -42,7 +39,7 @@
 }
 
 .hero-copy h1 .name {
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  background: linear-gradient(135deg, #f9a825 0%, #ff6f3c 50%, #e040fb 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -60,29 +57,37 @@
   align-items: center;
   gap: 8px;
   margin-top: 22px;
-  padding: 12px 30px;
+  padding: 11px 30px;
   font-size: var(--text-base);
   font-weight: 600;
-  color: #fff;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: var(--text-main);
+  background: transparent;
+  border: 2px solid transparent;
+  /* Gradient border via background-clip trick */
+  background-image: linear-gradient(var(--bg), var(--bg)),
+                    linear-gradient(135deg, var(--accent), var(--accent-2));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
   border-radius: 50px;
   text-decoration: none;
   width: fit-content;
-  transition: opacity 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
-  box-shadow: 0 4px 18px rgba(162, 89, 255, 0.28);
+  transition: background-image 0.25s ease, transform 0.22s ease,
+              box-shadow 0.22s ease, color 0.22s ease;
+  box-shadow: 0 2px 12px rgba(162, 89, 255, 0.18);
 }
 
 .resume-btn:hover {
-  opacity: 0.88;
+  background-image: linear-gradient(135deg, var(--accent), var(--accent-2)),
+                    linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #fff;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(162, 89, 255, 0.42);
+  box-shadow: 0 8px 24px rgba(162, 89, 255, 0.38);
 }
 
 .resume-btn:active {
   transform: translateY(0);
 }
 
-/* ── Profile image ───────────────────────────────────────────── */
 .hero-img {
   width: clamp(200px, 22vw, 280px);
   height: clamp(200px, 22vw, 280px);
@@ -99,7 +104,6 @@
   box-shadow: 0 0 48px rgba(162, 89, 255, 0.28);
 }
 
-/* ── Mobile ──────────────────────────────────────────────────── */
 @media (max-width: 768px) {
   .hero {
     padding: 100px 20px 56px;

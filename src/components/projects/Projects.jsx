@@ -1,4 +1,4 @@
-import "./Service.css";
+import "./Projects.css"
 import ProjectData from "../../assets/project_data";
 import Card from "../common/Card";
 

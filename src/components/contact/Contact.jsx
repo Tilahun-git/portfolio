@@ -1,8 +1,12 @@
 import React from "react";
 import "./Contact.css";
-import locationIcon from "../../assets/location-icon.png";
-import emailIcon from "../../assets/email-icon.png";
-import callIcon from "../../assets/call-icon.png";
+import { FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
+
+const CONTACT_DETAILS = [
+  { icon: <FaEnvelope />, label: "Email",    text: "tilahuntareke8@gmail.com" },
+  { icon: <FaPhone />,    label: "Phone",    text: "+251 983 898 486"         },
+  { icon: <FaMapMarkerAlt />, label: "Location", text: "Addis Ababa, Ethiopia" },
+];
 
 const Contact = () => {
   const [status, setStatus] = React.useState("");
@@ -21,7 +25,6 @@ const Contact = () => {
     }
 
     formData.append("access_key", import.meta.env.VITE_WEB3FORMS_ACCESS_KEY);
-
     const json = JSON.stringify(Object.fromEntries(formData));
 
     try {
@@ -58,13 +61,9 @@ const Contact = () => {
             I'm currently available for new projects and collaborations.
           </p>
           <div className="contact-details">
-            {[
-              { icon: emailIcon,    alt: "Email",    text: "tilahuntareke8@gmail.com" },
-              { icon: callIcon,     alt: "Phone",    text: "+251 983 898 486"         },
-              { icon: locationIcon, alt: "Location", text: "Addis Ababa, Ethiopia"    },
-            ].map(({ icon, alt, text }) => (
-              <div className="contact-row" key={alt}>
-                <img src={icon} alt={alt} />
+            {CONTACT_DETAILS.map(({ icon, label, text }) => (
+              <div className="contact-row" key={label}>
+                <span className="contact-icon">{icon}</span>
                 <span>{text}</span>
               </div>
             ))}

@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import './NavBar.css';
 import { FaBars, FaTimes, FaSun, FaMoon } from 'react-icons/fa';
-import logo from '../../assets/logo.jpg';
 import { useTheme } from '../../context/ThemeContext';
 
 const NavBar = () => {
@@ -10,27 +9,45 @@ const NavBar = () => {
   const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
-    const sections = document.querySelectorAll('section');
+    const sections = Array.from(document.querySelectorAll('section[id]'));
+
+    // Keep a map of how much each section is visible
+    const visibilityMap = new Map(sections.map((s) => [s.id, 0]));
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(`#${entry.target.id}`);
+          visibilityMap.set(entry.target.id, entry.intersectionRatio);
+        });
+
+        // Pick whichever section is most visible
+        let maxRatio = 0;
+        let mostVisible = activeSection.replace('#', '');
+        visibilityMap.forEach((ratio, id) => {
+          if (ratio > maxRatio) {
+            maxRatio = ratio;
+            mostVisible = id;
           }
         });
+
+        if (maxRatio > 0) {
+          setActiveSection(`#${mostVisible}`);
+        }
       },
-      { threshold: 0.4 }
+      {
+        // Fires at multiple points so we always catch partial visibility
+        threshold: [0, 0.1, 0.25, 0.5, 0.75, 1],
+      }
     );
 
     sections.forEach((s) => observer.observe(s));
-    return () => sections.forEach((s) => observer.unobserve(s));
+    return () => observer.disconnect();
   }, []);
 
   return (
     <div className="navbar">
-      <a href="#home">
-        <img src={logo} alt="Logo" className="navbar-logo" />
+      <a href="#home" className="navbar-brand" aria-label="Home">
+        <span className="navbar-logo-text">T</span>
       </a>
 
       <ul className={`nav-menu ${menuOpen ? 'show' : ''}`}>

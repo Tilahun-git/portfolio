@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import '@fontsource/outfit'; // Defaults to 400 weight
+import '@fontsource/outfit';
 import './index.css'
 import App from './App.jsx'
 

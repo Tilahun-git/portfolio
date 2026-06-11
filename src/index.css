@@ -17,11 +17,11 @@
   --divider:      rgba(255, 255, 255, 0.06);
 
   --font-base:    'Outfit', sans-serif;
-  --text-xs:      0.75rem;   /* 12px */
-  --text-sm:      0.875rem;  /* 14px */
-  --text-base:    1rem;      /* 16px — minimum for body copy */
-  --text-lg:      1.125rem;  /* 18px */
-  --text-xl:      1.25rem;   /* 20px */
+  --text-xs:      0.75rem;  
+  --text-sm:      0.875rem;  
+  --text-base:    1rem;     
+  --text-lg:      1.125rem;  
+  --text-xl:      1.25rem;  
 
   --sec-pad-top:    52px;
   --sec-pad-bottom: 44px;
@@ -37,7 +37,7 @@
   --surface:      #ffffff;
   --border:       rgba(0, 0, 0, 0.08);
   --text-main:    #111110;
-  --text-body:    #3a3a3a;   /* good readable dark for paragraphs */
+  --text-body:    #3a3a3a;   
   --text-muted:   #6b6b6b;
   --card-bg:      #ffffff;
   --card-border:  rgba(0, 0, 0, 0.08);

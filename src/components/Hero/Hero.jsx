@@ -14,12 +14,11 @@ const Hero = () => (
           href="/Tilahun_Tareke_resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="resume-btn"
-        >
+          className="resume-btn">
           View Resume
         </a>
       </div>
-      <img src={profile} alt="Tilahun Tareke" className="hero-img" />
+      <img src={profile} alt="Tilahun Tareke" className="hero-img" fetchpriority="high" />
     </div>
   </div>
 );

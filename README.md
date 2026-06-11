@@ -1,51 +1,91 @@
 # Tilahun Tareke — Portfolio
 
-A personal portfolio website built with **React** and **Vite**, showcasing my skills, projects, education, and experience as a full-stack web developer.
+> Personal portfolio website of **Tilahun Tareke**, Full-Stack Web Developer & Freelancer based in Addis Ababa, Ethiopia.
 
-🔗 **Live site:** _[add your deployment URL here]_
+🔗 **Live:** _[add your deployment URL here]_
+📄 **Resume:** available via the "View Resume" button in the hero section
 
 ---
 
 ## ✨ Features
 
-- **Dark / Light mode** — persistent theme toggle stored in `localStorage`
-- **Smooth scroll navigation** — active section highlighted in the navbar via `IntersectionObserver`
-- **Responsive design** — works cleanly on mobile, tablet, and desktop
-- **Contact form** — powered by [Web3Forms](https://web3forms.com/) with honeypot spam protection
-- **Project cards** — unique themed gradient backgrounds per project, keyboard-accessible
-- **Skill progress bars** — animated gradient bars in the About section
-- **Downloadable résumé** — direct PDF link in the hero section
+- **Dark / Light mode** — theme toggle persisted in `localStorage`, adapts every colour automatically
+- **Active section highlighting** — navbar link tracks the current section via `IntersectionObserver`
+- **Responsive design** — fully functional on mobile, tablet, and desktop
+- **Animated skill bars** — progress bars in the About section
+- **Project cards** — 5 project cards with GitHub / live demo links
+- **Working contact form** — powered by [Web3Forms](https://web3forms.com/) with honeypot spam protection
+- **SVG favicon** — circular "T" logo matching the navbar brand
+- **Open Graph tags** — correct preview cards when sharing on LinkedIn, WhatsApp, etc.
+- **Downloadable résumé** — direct PDF link in the hero
 
 ---
 
 ## 🗂️ Sections
 
-| Section | Description |
-|---------|-------------|
-| **Hero** | Introduction with name, role, profile photo, and résumé link |
-| **About Me** | Bio, skill progress bars, and stats (experience, projects, clients) |
-| **Skills** | Four cards — Frontend, Backend, Databases, Tools & Technologies |
-| **Education** | Academic degree and certifications |
-| **Experience** | Work history with responsibilities |
-| **Projects** | Five project cards with gradient backgrounds and GitHub links |
-| **Contact** | Contact info panel + message form (Web3Forms) |
-| **Footer** | Quick nav, contact details, social links |
+| # | Section | Description |
+|---|---------|-------------|
+| 1 | **Hero** | Name, role, profile photo, résumé link |
+| 2 | **About Me** | Bio, animated skill bars, stats (experience / projects / clients) |
+| 3 | **Skills** | Four cards — Frontend, Backend, Databases, Tools |
+| 4 | **Education** | Degree and certifications |
+| 5 | **Experience** | Work history with responsibilities |
+| 6 | **Projects** | Five project cards with repo / live links |
+| 7 | **Contact** | Contact info + message form |
+| 8 | **Footer** | Quick nav, contact details, social links |
 
 ---
 
 ## 🛠️ Tech Stack
 
-**Frontend**
-- React 19
-- Vite 6
-- CSS (custom properties, no CSS framework)
-- React Icons
+| Layer | Technology |
+|-------|-----------|
+| Framework | React 19 |
+| Build tool | Vite 6 |
+| Styling | Plain CSS with custom properties (no framework) |
+| Icons | React Icons 5 |
+| Font | [Outfit](https://fonts.google.com/specimen/Outfit) — Google Fonts |
+| Form | [Web3Forms](https://web3forms.com/) |
+| Deployment | _(add your platform — Vercel / Netlify / Render)_ |
 
-**Form**
-- [Web3Forms](https://web3forms.com/) — serverless form handling
+---
 
-**Fonts**
-- [Outfit](https://fonts.google.com/specimen/Outfit) via Google Fonts
+## 📁 Project Structure
+
+```
+portfolio/
+├── public/
+│   ├── favicon.svg                  # Circular "T" SVG favicon
+│   ├── apple-touch-icon.png         # iOS home screen icon
+│   ├── site.webmanifest             # PWA manifest
+│   ├── web-app-manifest-192x192.png
+│   ├── web-app-manifest-512x512.png
+│   └── Tilahun_Tareke_resume.pdf    # Résumé (linked from Hero)
+├── src/
+│   ├── assets/
+│   │   ├── interactProfile.png      # Hero profile photo
+│   │   ├── profile.png              # About section photo
+│   │   └── project_data.js          # Project cards data
+│   ├── components/
+│   │   ├── common/Card.jsx          # Shared card component
+│   │   ├── navbar/
+│   │   ├── Hero/
+│   │   ├── About/
+│   │   ├── skills/
+│   │   ├── education/
+│   │   ├── experience/
+│   │   ├── projects/                # Projects section
+│   │   ├── contact/
+│   │   └── footer/
+│   ├── context/
+│   │   └── ThemeContext.jsx         # Dark / light mode context
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css                    # Global design tokens & base styles
+├── index.html
+├── vite.config.js
+└── package.json
+```
 
 ---
 
@@ -58,23 +98,20 @@ A personal portfolio website built with **React** and **Vite**, showcasing my sk
 ### Installation
 
 ```bash
-# Clone the repo
 git clone https://github.com/Tilahun-git/portfolio.git
 cd portfolio
-
-# Install dependencies
 npm install
 ```
 
 ### Environment Variables
 
-Create a `.env` file in the root:
+Create a `.env` file in the project root:
 
 ```env
-VITE_WEB3FORMS_ACCESS_KEY=your_web3forms_access_key_here
+VITE_WEB3FORMS_ACCESS_KEY=your_web3forms_access_key
 ```
 
-Get your free access key at [web3forms.com](https://web3forms.com/).
+Get your free key at [web3forms.com](https://web3forms.com/).
 
 ### Development
 
@@ -82,7 +119,7 @@ Get your free access key at [web3forms.com](https://web3forms.com/).
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173) in your browser.
+Open [http://localhost:5173](http://localhost:5173).
 
 ### Production Build
 
@@ -90,9 +127,7 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 npm run build
 ```
 
-Output goes to the `dist/` folder.
-
-### Preview Production Build
+Output in `dist/`. Preview locally with:
 
 ```bash
 npm run preview
@@ -100,48 +135,9 @@ npm run preview
 
 ---
 
-## 📁 Project Structure
-
-```
-portfolio/
-├── public/
-│   ├── icon.jpg
-│   └── Tilahun_Tareke_resume.pdf
-├── src/
-│   ├── assets/
-│   │   ├── profile.jpg
-│   │   ├── profile2.jpg
-│   │   ├── logo.jpg
-│   │   ├── project_data.js       # Project cards data
-│   │   └── [icons …]
-│   ├── components/
-│   │   ├── common/
-│   │   │   ├── Card.jsx           # Shared card component
-│   │   │   └── Card.css
-│   │   ├── navbar/
-│   │   ├── Hero/
-│   │   ├── About/
-│   │   ├── skills/
-│   │   ├── education/
-│   │   ├── experience/
-│   │   ├── service/               # Projects section
-│   │   ├── contact/
-│   │   └── footer/
-│   ├── context/
-│   │   └── ThemeContext.jsx       # Dark/light mode context
-│   ├── App.jsx
-│   ├── main.jsx
-│   └── index.css                  # Global design tokens & base styles
-├── index.html
-├── vite.config.js
-└── package.json
-```
-
----
-
 ## 🎨 Design System
 
-All colours, spacing, and typography are defined as CSS custom properties in `src/index.css` and swap automatically between dark and light mode via `[data-theme="light"]`.
+All tokens live in `src/index.css` and flip automatically with `[data-theme="light"]`.
 
 | Token | Dark | Light |
 |-------|------|-------|
@@ -149,14 +145,15 @@ All colours, spacing, and typography are defined as CSS custom properties in `sr
 | `--surface` | `#1c1c21` | `#ffffff` |
 | `--text-main` | `#ececec` | `#111110` |
 | `--text-body` | `#c8c8c8` | `#3a3a3a` |
+| `--text-muted` | `#8a8a8a` | `#6b6b6b` |
 | `--accent` | `#a259ff` | `#a259ff` |
 | `--accent-2` | `#269ceb` | `#269ceb` |
 
 ---
 
-## 📬 Adding New Projects
+## 📦 Adding a New Project
 
-Edit `src/assets/project_data.js` and add a new entry:
+Edit `src/assets/project_data.js`:
 
 ```js
 {
@@ -164,23 +161,32 @@ Edit `src/assets/project_data.js` and add a new entry:
   name: "Your Project Name",
   description: "Short description of what it does.",
   repo: "https://github.com/Tilahun-git/your-repo",
-  gradient: "linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)",
 }
 ```
 
-Choose a gradient that reflects the project's theme. The card handles everything else automatically.
+The card grid updates automatically — no other changes needed.
+
+---
+
+## 🌐 Skills Covered
+
+**Frontend** — HTML5, CSS3, Tailwind CSS, JavaScript, React.js, Next.js  
+**Backend** — Node.js, Express.js, Spring Boot  
+**Databases** — MongoDB, PostgreSQL  
+**Tools** — Git & GitHub, Figma, Postman
+
+---
+
+## 📬 Contact
+
+| | |
+|--|--|
+| Email | [tilahuntareke8@gmail.com](mailto:tilahuntareke8@gmail.com) |
+| GitHub | [@Tilahun-git](https://github.com/Tilahun-git) |
+| Location | Addis Ababa, Ethiopia |
 
 ---
 
 ## 📄 License
 
-This project is open source under the [MIT License](LICENSE).
-
----
-
-## 🙋‍♂️ Contact
-
-**Tilahun Tareke**
-- Email: [tilahuntareke8@gmail.com](mailto:tilahuntareke8@gmail.com)
-- GitHub: [@Tilahun-git](https://github.com/Tilahun-git)
-- Location: Addis Ababa, Ethiopia
+Open source under the [MIT License](LICENSE).

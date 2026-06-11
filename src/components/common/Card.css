@@ -1,4 +1,3 @@
-/* ── Base card ───────────────────────────────────────────────── */
 .card {
   position: relative;
   background: var(--card-bg);
@@ -19,36 +18,33 @@
   box-shadow: 0 10px 26px rgba(162, 89, 255, 0.1);
 }
 
-/* ── Typography ──────────────────────────────────────────────── */
 .card-title {
-  font-size: var(--text-lg);      /* 18px — clear, readable heading */
+  font-size: var(--text-lg);  
   font-weight: 700;
   color: var(--text-main);
   line-height: 1.3;
 }
 
 .card-subtitle {
-  font-size: var(--text-base);    /* 16px */
+  font-size: var(--text-base);   
   color: var(--accent-2);
   font-weight: 600;
 }
 
 .card-meta {
-  font-size: var(--text-sm);      /* 14px — date/meta is fine smaller */
+  font-size: var(--text-sm);     
   color: var(--text-muted);
   font-style: italic;
 }
 
 .card-text {
-  font-size: var(--text-base);    /* 16px — no more tiny text */
+  font-size: var(--text-base);   
   color: var(--text-body);
   line-height: 1.7;
 }
 
-/* ── Project cards — same bg as all other cards, no image ──────── */
 .card--project {
   cursor: pointer;
-  /* inherits all base .card styles: bg, border, radius, shadow */
 }
 
 .card--project .card-title {
@@ -59,7 +55,6 @@
   color: var(--text-body);
 }
 
-/* ── Mobile ──────────────────────────────────────────────────── */
 @media (max-width: 600px) {
   .card {
     padding: 18px 16px;

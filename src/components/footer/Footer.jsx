@@ -15,7 +15,6 @@ const Footer = () => (
   <footer className="footer">
     <div className="footer-top">
 
-      {/* Brand column */}
       <div className="footer-brand">
         <span className="footer-name">Tilahun Tareke</span>
         <p className="footer-tagline">
@@ -34,8 +33,6 @@ const Footer = () => (
           </a>
         </div>
       </div>
-
-      {/* Quick links */}
       <div className="footer-col">
         <h4 className="footer-col-title">Quick Links</h4>
         <nav className="footer-nav">
@@ -45,7 +42,6 @@ const Footer = () => (
         </nav>
       </div>
 
-      {/* Contact info */}
       <div className="footer-col">
         <h4 className="footer-col-title">Contact</h4>
         <div className="footer-contact-list">
@@ -64,7 +60,7 @@ const Footer = () => (
 
     <div className="footer-bottom">
       <span>© {new Date().getFullYear()} Tilahun Tareke. All rights reserved.</span>
-      <span className="footer-made">Built with React &amp; Vite</span>
+      <span className="footer-made">Built with React and vite</span>
     </div>
   </footer>
 );

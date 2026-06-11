@@ -1,11 +1,9 @@
-/* ── Contact ─────────────────────────────────────────────────── */
 .contact-sec {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* ── Body: info + form ───────────────────────────────────────── */
 .contact-body {
   display: grid;
   grid-template-columns: 1fr 1.7fr;
@@ -15,7 +13,6 @@
   align-items: start;
 }
 
-/* ── Left info panel ─────────────────────────────────────────── */
 .contact-subhead {
   font-size: 1.45rem;
   font-weight: 700;
@@ -45,11 +42,13 @@
   gap: 10px;
 }
 
-.contact-row img {
-  width: 18px;
-  height: 18px;
-  opacity: 0.7;
+.contact-icon {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: var(--accent-2);
   flex-shrink: 0;
+  width: 18px;
 }
 
 .contact-row span {
@@ -58,7 +57,6 @@
   word-break: break-all;
 }
 
-/* ── Form ────────────────────────────────────────────────────── */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -105,21 +103,29 @@
 }
 
 .contact-form button {
-  padding: 12px 36px;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  color: #fff;
+  padding: 11px 36px;
+  background-image: linear-gradient(var(--bg), var(--bg)),
+                    linear-gradient(135deg, var(--accent), var(--accent-2));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  border: 2px solid transparent;
+  background-color: transparent;
+  color: var(--text-main);
   font-size: 0.95rem;
   font-weight: 600;
-  border: none;
+  font-family: inherit;
   border-radius: 50px;
   cursor: pointer;
   width: fit-content;
-  transition: opacity 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
-  box-shadow: 0 4px 18px rgba(162, 89, 255, 0.26);
+  transition: background-image 0.25s ease, transform 0.22s ease,
+              box-shadow 0.22s ease, color 0.22s ease;
+  box-shadow: 0 2px 12px rgba(162, 89, 255, 0.16);
 }
 
 .contact-form button:hover:not(:disabled) {
-  opacity: 0.88;
+  background-image: linear-gradient(135deg, var(--accent), var(--accent-2)),
+                    linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #fff;
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(162, 89, 255, 0.38);
 }
@@ -137,7 +143,6 @@
 .form-status.success { color: #4ade80; }
 .form-status.error   { color: #f87171; }
 
-/* ── Responsive ──────────────────────────────────────────────── */
 @media (max-width: 768px) {
   .contact-body {
     grid-template-columns: 1fr;

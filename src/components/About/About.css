@@ -1,4 +1,3 @@
-/* ── About ───────────────────────────────────────────────────── */
 .about {
   display: flex;
   flex-direction: column;
@@ -6,7 +5,6 @@
   gap: 40px;
 }
 
-/* ── Body: image + text ──────────────────────────────────────── */
 .about-body {
   display: flex;
   align-items: flex-start;
@@ -45,7 +43,6 @@
   color: var(--text-body);
 }
 
-/* ── Skill bars ──────────────────────────────────────────────── */
 .about-bars {
   display: flex;
   flex-direction: column;
@@ -90,7 +87,6 @@
   flex-shrink: 0;
 }
 
-/* ── Stats row ───────────────────────────────────────────────── */
 .about-stats {
   display: flex;
   align-items: center;
@@ -138,7 +134,6 @@
   flex-shrink: 0;
 }
 
-/* ── Responsive ──────────────────────────────────────────────── */
 @media (max-width: 860px) {
   .about-body {
     flex-direction: column;

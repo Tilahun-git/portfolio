@@ -21,7 +21,7 @@ const ProjectData = [
     id: 4,
     name: "Student Clearance System",
     description: "A graduation clearance management system that streamlines the clearance process across departments.",
-    repo: "https://github.com/Tilahun-git/student_clearance_system",
+    repo: "https://student-clearance-system-m785.onrender.com",
   },
   {
     id: 5,

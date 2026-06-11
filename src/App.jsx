@@ -2,7 +2,7 @@ import NavBar from './components/navbar/NavBar'
 import Hero from './components/Hero/Hero'
 import About from './components/About/About'
 import Contact from './components/contact/Contact'
-import Services from './components/service/Services'
+import Projects from './components/projects/Projects'
 import Skills from './components/skills/Skills'
 import Footer from './components/footer/Footer'
 import Experience from './components/experience/Experience'
@@ -17,7 +17,7 @@ const App = () => (
     <section id="skills"><Skills /></section>
     <section id="education"><Education /></section>
     <section id="experience"><Experience /></section>
-    <section id="projects"><Services /></section>
+    <section id="projects"><Projects /></section>
     <section id="contact"><Contact /></section>
     <Footer />
   </ThemeProvider>
