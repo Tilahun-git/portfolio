@@ -6,8 +6,8 @@ const items = [
     icon: <HiAcademicCap className="edu-icon degree" />,
     title: "BSc in Software Engineering",
     institution: "Woldia University",
-    period: "2022 – Present",
-    detail: "Focused on web development, software design, algorithms, and system architecture.",
+    period: "2022 – 2026",
+    detail: "Focused on web development, software design, algorithms, and system architecture. Graduated with CGPA of 3.96 and exit exam of 78%",
     type: "degree",
   },
   {
@@ -15,7 +15,7 @@ const items = [
     title: "Frontend Development Certification",
     institution: "Coursera",
     period: "2025",
-    detail: "HTML, CSS, JavaScript, React, and Next.js.",
+    detail: "HTML, CSS, JavaScript,Typescript React, and Next.js.",
     type: "cert",
   },
   {
@@ -23,7 +23,7 @@ const items = [
     title: "Backend Development Certification",
     institution: "Coursera",
     period: "2025",
-    detail: "Node.js, Express.js, and MongoDB.",
+    detail: "Node.js, Express.js,Spring boot and with database of Postgres and MongoDB.",
     type: "cert",
   },
 ];

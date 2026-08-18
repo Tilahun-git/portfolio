@@ -18,8 +18,8 @@ const Hero = () => (
 
         <div className="hero-meta">
           <span><FaMapMarkerAlt className="hero-meta-icon" /> Addis Ababa, Ethiopia</span>
-          <span><FaBriefcase className="hero-meta-icon" /> Available for Freelance</span>
-          <span><FaRocket className="hero-meta-icon" /> 3+ Years Experience</span>
+          <span><FaBriefcase className="hero-meta-icon" /> Open for Freelancing</span>
+          <span><FaRocket className="hero-meta-icon" /> 2+ Years Experience</span>
         </div>
 
         <div className="hero-cta">

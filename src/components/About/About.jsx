@@ -2,10 +2,10 @@ import "./About.css";
 import profile from "../../assets/profile.png";
 
 const HIGHLIGHTS = [
-  { label: "Specialization", value: "Full-Stack Web Development (React, Next.js, Spring Boot, Node.js)" },
-  { label: "Experience",     value: "3+ years building production web applications" },
+  { label: "Specialization", value: "Full-Stack Web Development with experience of React, Next.js, Spring Boot, Node.js" },
+  { label: "Experience",     value: "2+ years building production web applications" },
   { label: "Industries",     value: "Education, Healthcare, Government, Startups" },
-  { label: "Philosophy",     value: "Clean code, intuitive UX, and solutions that solve real business problems" },
+  { label: "Philosophy",     value: "Continous Learning, gratitude, hard working,clean code, intuitive UX, and then solve real business problems" },
 ];
 
 const About = () => (
@@ -40,21 +40,6 @@ const About = () => (
           ))}
         </div>
       </div>
-    </div>
-    <div className="about-stats">
-      {[
-        { num: "5+",   label: "Projects Completed" },
-        { num: "3+",   label: "Years Experience"    },
-        { num: "100%", label: "Remote Friendly"     },
-      ].map(({ num, label }, i, arr) => (
-        <>
-          <div className="stat" key={label}>
-            <strong>{num}</strong>
-            <span>{label}</span>
-          </div>
-          {i < arr.length - 1 && <div className="stat-divider" key={`d${i}`} />}
-        </>
-      ))}
     </div>
   </div>
 );
