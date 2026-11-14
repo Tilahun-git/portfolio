@@ -15,6 +15,20 @@ const items = [
     ],
   },
   {
+    role: "Backend Developer Intern",
+    type: "Paid Internship",
+    company: "Dengene Software Solution",
+    period: "July 2026 – Nov 2026",
+    desc: "Designed and built the Governance Policy Management System — an enterprise backend using microservice and event-driven architecture.",
+    achievements: [
+      "Architected and implemented microservices with Spring Boot and PostgreSQL",
+      "Integrated Apache Kafka as a message broker for inter-service event publishing",
+      "Containerised all services using Docker and Docker Compose",
+      "Implemented role-based access control and policy approval workflows",
+      "Collaborated with the team on API design, code reviews, and sprint planning",
+    ],
+  },
+  {
     role: "Frontend Developer Intern",
     type: "Internship",
     company: "Ministry of Innovation and Technology",
