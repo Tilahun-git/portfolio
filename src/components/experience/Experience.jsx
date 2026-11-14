@@ -2,7 +2,7 @@ import "./Experience.css";
 
 const items = [
   {
-    role: "Full-Stack Developer",
+    role: "Full-Stack Web Developer",
     type: "Freelance",
     company: "Self-Employed",
     period: "January 2023 – Present",
@@ -29,7 +29,7 @@ const items = [
     ],
   },
   {
-    role: "Frontend Developer Intern",
+    role: "FullStack Web Developer Intern",
     type: "Internship",
     company: "Ministry of Innovation and Technology",
     period: "March 2025 – June 2025",
