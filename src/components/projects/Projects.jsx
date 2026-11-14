@@ -1,12 +1,18 @@
 import "./Projects.css";
 import ProjectData from "../../assets/project_data";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt, FaBuilding } from "react-icons/fa";
 import { HiCheckCircle } from "react-icons/hi";
 
 const ProjectCard = ({ project }) => (
   <article className="project-card">
     <div className="project-card-header">
       <h3 className="project-card-title">{project.name}</h3>
+      {project.client && (
+        <span className="project-client">
+          <FaBuilding size={11} />
+          {project.client}
+        </span>
+      )}
     </div>
 
     <p className="project-card-desc">{project.description}</p>

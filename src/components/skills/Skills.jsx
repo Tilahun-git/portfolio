@@ -1,11 +1,11 @@
 
 import {FaHtml5,FaCss3Alt,FaJsSquare,FaReact,FaNodeJs,FaGithub,FaFigma,FaDocker,} from "react-icons/fa";
-import {SiTailwindcss,SiMongodb,SiPostman,SiApachekafka,SiRedis,SiExpress,SiPostgresql,SiSpringboot,SiNextdotjs,} from "react-icons/si";
+import {SiTailwindcss,SiMongodb,SiPostman,SiApachekafka,SiRedis,SiExpress,SiPostgresql,SiSpringboot,SiNextdotjs, SiMysql,} from "react-icons/si";
 import Card from "../common/Card";
 import "./Skills.css";
 const CARDS = [
   {
-    title: "Frontend",
+    title: "Frontend Techs",
     skills: [
       { icon: <FaHtml5 className="si html" />, label: "HTML5" },
       { icon: <FaCss3Alt className="si css" />, label: "CSS3" },
@@ -16,28 +16,30 @@ const CARDS = [
     ],
   },
   {
-    title: "Backend",
+    title: "Backend Techs",
     skills: [
       { icon: <FaNodeJs className="si node" />, label: "Node.js" },
       { icon: <SiExpress className="si express" />, label: "Express.js" },
       { icon: <SiSpringboot className="si springboot" />, label: "Spring Boot" },
-      { icon: <SiApachekafka className="si kafka" />, label: "Apache Kafka" },
-      { icon: <SiRedis className="si redis" />, label: "Redis" },
+      
     ],
   },
 
   {
-    title: "DevOps & Tools",
+    title: "DevOps & Infra",
     skills: [
       { icon: <FaDocker className="si docker" />, label: "Docker" },
+      { icon: <SiApachekafka className="si kafka" />, label: "Apache Kafka" },
     ],
   },
 
   {
-    title: "Databases",
+    title: "Databases & Caching",
     skills: [
       { icon: <SiMongodb className="si mongo" />, label: "MongoDB" },
       { icon: <SiPostgresql className="si postgres" />, label: "PostgreSQL" },
+      { icon: <SiMysql className="si mysql"/>, label: "MySQL"},
+      { icon: <SiRedis className="si redis" />, label: "Redis" },
     ],
   },
 

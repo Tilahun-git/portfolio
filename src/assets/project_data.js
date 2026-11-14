@@ -13,6 +13,7 @@ const ProjectData = [
     ],
     github: "https://github.com/Tilahun-git/intership_project",
     live: null,
+    client: "Ministry of Innovation and Technology",
   },
   {
     id: 2,
@@ -28,6 +29,7 @@ const ProjectData = [
     ],
     github: "https://github.com/Tilahun-git/health_guidance",
     live: null,
+    client: "Personal Project",
   },
   {
     id: 3,
@@ -44,6 +46,25 @@ const ProjectData = [
     ],
     github: "https://github.com/Tilahun-git",
     live: "https://student-clearance-system-m785.onrender.com",
+    client: "Woldia University",
+  },
+  {
+    id: 5,
+    name: "Governance Policy Management System",
+    description:
+      "An enterprise-grade policy management platform built for Dengene Software Solution, enabling organisations to author, version, distribute, and audit governance policies across departments using a microservice and event-driven architecture.",
+    tech: ["Spring Boot", "Java", "PostgreSQL", "Apache Kafka", "Docker", "Microservices"],
+    features: [
+      "Microservice & Event-Driven Architecture",
+      "Kafka Message Broker Integration",
+      "Policy Versioning & Audit Trail",
+      "Role-Based Access & Approval Workflow",
+      "Dockerised Multi-Service Deployment",
+      "Inter-Service Event Publishing",
+    ],
+    github: "https://github.com/Tilahun-git/governance_system",
+    live: null,
+    client: "Dengene Software Solution",
   },
   {
     id: 4,
@@ -60,6 +81,7 @@ const ProjectData = [
     ],
     github: "https://github.com/Tilahun-git/webserviceBlogApp_project",
     live: null,
+    client: "School Team Project",
   },
 ];
 
