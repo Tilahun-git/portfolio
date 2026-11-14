@@ -19,8 +19,8 @@
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
-  border: 3px solid rgba(162, 89, 255, 0.22);
-  box-shadow: 0 0 28px rgba(162, 89, 255, 0.1);
+  border: 3px solid rgba(224, 123, 57, 0.25);
+  box-shadow: 0 0 28px rgba(224, 123, 57, 0.1);
   transition: transform 0.35s ease;
   margin-top: 4px;
 }
@@ -93,7 +93,7 @@
 .stat strong {
   font-size: clamp(24px, 2.8vw, 36px);
   font-weight: 800;
-  background: linear-gradient(135deg, #df8908, #b415ff);
+  background: linear-gradient(135deg, var(--accent), #c95c20);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

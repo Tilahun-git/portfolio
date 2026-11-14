@@ -94,8 +94,8 @@
 
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: var(--accent-2);
-  box-shadow: 0 0 0 3px rgba(38, 156, 235, 0.13);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(224, 123, 57, 0.13);
 }
 
 .form-group textarea {
@@ -105,7 +105,7 @@
 .contact-form button {
   padding: 11px 36px;
   background-image: linear-gradient(var(--bg), var(--bg)),
-                    linear-gradient(135deg, var(--accent), var(--accent-2));
+                    linear-gradient(135deg, var(--accent), #c95c20);
   background-origin: border-box;
   background-clip: padding-box, border-box;
   border: 2px solid transparent;
@@ -119,15 +119,15 @@
   width: fit-content;
   transition: background-image 0.25s ease, transform 0.22s ease,
               box-shadow 0.22s ease, color 0.22s ease;
-  box-shadow: 0 2px 12px rgba(162, 89, 255, 0.16);
+  box-shadow: 0 2px 12px var(--accent-glow);
 }
 
 .contact-form button:hover:not(:disabled) {
-  background-image: linear-gradient(135deg, var(--accent), var(--accent-2)),
-                    linear-gradient(135deg, var(--accent), var(--accent-2));
+  background-image: linear-gradient(135deg, var(--accent), #c95c20),
+                    linear-gradient(135deg, var(--accent), #c95c20);
   color: #fff;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(162, 89, 255, 0.38);
+  box-shadow: 0 8px 24px var(--accent-glow);
 }
 
 .contact-form button:disabled {

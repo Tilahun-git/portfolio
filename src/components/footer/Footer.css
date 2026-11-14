@@ -54,8 +54,8 @@
 
 .footer-socials a:hover {
   transform: translateY(-2px);
-  background: rgba(38, 156, 235, 0.1);
-  border-color: rgba(38, 156, 235, 0.35);
+  background: var(--accent-2-tint);
+  border-color: rgba(58, 158, 143, 0.35);
   color: var(--accent-2);
 }
 

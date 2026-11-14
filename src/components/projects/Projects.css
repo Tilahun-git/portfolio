@@ -27,8 +27,8 @@
 
 .project-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(162, 89, 255, 0.4);
-  box-shadow: 0 10px 28px rgba(162, 89, 255, 0.1);
+  border-color: rgba(224, 123, 57, 0.35);
+  box-shadow: 0 10px 28px rgba(224, 123, 57, 0.08);
 }
 
 /* ── Title ───────────────────────────────────────────────────── */
@@ -59,15 +59,15 @@
   letter-spacing: 0.3px;
   padding: 3px 10px;
   border-radius: 999px;
-  background: rgba(162, 89, 255, 0.1);
+  background: var(--accent-tint);
   color: var(--accent);
-  border: 1px solid rgba(162, 89, 255, 0.25);
+  border: 1px solid rgba(224, 123, 57, 0.25);
   white-space: nowrap;
   transition: background 0.2s ease;
 }
 
 .project-card:hover .project-tech-badge {
-  background: rgba(162, 89, 255, 0.16);
+  background: rgba(224, 123, 57, 0.18);
 }
 
 /* ── Features list ───────────────────────────────────────────── */
@@ -120,15 +120,15 @@
 
 /* Filled — Live Demo */
 .project-btn--primary {
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  background: linear-gradient(135deg, var(--accent), #c95c20);
   color: #fff;
   border: none;
-  box-shadow: 0 3px 12px rgba(162, 89, 255, 0.25);
+  box-shadow: 0 3px 12px var(--accent-glow);
 }
 
 .project-btn--primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(162, 89, 255, 0.38);
+  box-shadow: 0 6px 18px var(--accent-glow);
 }
 
 /* Outline — GitHub */
@@ -139,8 +139,8 @@
 }
 
 .project-btn--outline:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  border-color: var(--accent-2);
+  color: var(--accent-2);
   transform: translateY(-2px);
 }
 

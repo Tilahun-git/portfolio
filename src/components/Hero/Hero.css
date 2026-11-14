@@ -40,7 +40,7 @@
 }
 
 .hero-copy h1 .name {
-  background: linear-gradient(135deg, #f9a825 0%, #ff6f3c 50%, #e040fb 100%);
+  background: linear-gradient(135deg, #f0a04a 0%, #e07b39 55%, #c95c20 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -108,14 +108,14 @@
 
 /* Filled — Hire Me */
 .hero-btn--primary {
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  background: linear-gradient(135deg, var(--accent), #c95c20);
   color: #fff;
   border: 2px solid transparent;
-  box-shadow: 0 4px 18px rgba(162, 89, 255, 0.28);
+  box-shadow: 0 4px 18px var(--accent-glow);
 }
 .hero-btn--primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(162, 89, 255, 0.42);
+  box-shadow: 0 8px 26px var(--accent-glow);
 }
 
 /* Outline — View Projects */
@@ -129,8 +129,8 @@
   background-clip: padding-box, border-box;
 }
 .hero-btn--outline:hover {
-  background-image: linear-gradient(135deg, var(--accent), var(--accent-2)),
-                    linear-gradient(135deg, var(--accent), var(--accent-2));
+  background-image: linear-gradient(135deg, var(--accent), #c95c20),
+                    linear-gradient(135deg, var(--accent), #c95c20);
   color: #fff;
   transform: translateY(-2px);
 }
@@ -142,8 +142,8 @@
   border: 2px solid var(--border);
 }
 .hero-btn--ghost:hover {
-  border-color: var(--text-muted);
-  color: var(--text-main);
+  border-color: var(--accent-2);
+  color: var(--accent-2);
   transform: translateY(-2px);
 }
 
@@ -154,13 +154,13 @@
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
-  border: 3px solid rgba(162, 89, 255, 0.28);
-  box-shadow: 0 0 32px rgba(162, 89, 255, 0.15);
+  border: 3px solid rgba(224, 123, 57, 0.3);
+  box-shadow: 0 0 32px rgba(224, 123, 57, 0.12);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 .hero-img:hover {
   transform: scale(1.04);
-  box-shadow: 0 0 48px rgba(162, 89, 255, 0.28);
+  box-shadow: 0 0 48px rgba(224, 123, 57, 0.22);
 }
 
 /* ── Mobile ──────────────────────────────────────────────────── */

@@ -41,7 +41,7 @@
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  background: linear-gradient(135deg, var(--accent), #c95c20);
   flex-shrink: 0;
   margin-top: 4px;
   box-shadow: 0 0 0 4px var(--bg);
@@ -62,8 +62,8 @@
 }
 
 .exp-item-body:hover {
-  border-color: rgba(162, 89, 255, 0.35);
-  box-shadow: 0 8px 24px rgba(162, 89, 255, 0.08);
+  border-color: rgba(224, 123, 57, 0.3);
+  box-shadow: 0 8px 24px rgba(224, 123, 57, 0.07);
 }
 
 /* ── Header ──────────────────────────────────────────────────── */
@@ -97,9 +97,9 @@
   font-weight: 600;
   padding: 2px 8px;
   border-radius: 999px;
-  background: rgba(162, 89, 255, 0.12);
+  background: var(--accent-tint);
   color: var(--accent);
-  border: 1px solid rgba(162, 89, 255, 0.2);
+  border: 1px solid rgba(224, 123, 57, 0.22);
   text-transform: uppercase;
   letter-spacing: 0.4px;
 }

@@ -52,7 +52,7 @@
 /* Icon colours */
 .html       { color: #e34c26; }
 .css        { color: #264de4; }
-.js         { color: #f0db4f; }
+.js         { color: #e8c84a; }
 .react      { color: #61dafb; }
 .nextjs     { color: var(--text-main); }
 .node       { color: #68a063; }
@@ -61,9 +61,12 @@
 .mongo      { color: #4db33d; }
 .postgres   { color: #336791; }
 .tailwind   { color: #06b6d4; }
-.github     { color: var(--text-main); }
-.figma      { color: #a259ff; }
+.github     { color: var(--text-body); }
+.figma      { color: var(--accent); }
 .postman    { color: #ff6c37; }
+.docker     { color: #2496ed; }
+.kafka      { color: var(--text-body); }
+.redis      { color: #d82c20; }
 
 /* ── Responsive ──────────────────────────────────────────────── */
 @media (max-width: 600px) {

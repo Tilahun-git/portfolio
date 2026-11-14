@@ -27,20 +27,20 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  background: linear-gradient(135deg, var(--accent), #c95c20);
   color: #fff;
   font-size: 1.2rem;
   font-weight: 800;
   font-family: var(--font-base);
   letter-spacing: -0.5px;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-  box-shadow: 0 2px 12px rgba(162, 89, 255, 0.35);
+  box-shadow: 0 2px 12px var(--accent-glow);
   user-select: none;
 }
 
 .navbar-brand:hover .navbar-logo-text {
   transform: scale(1.1);
-  box-shadow: 0 4px 18px rgba(162, 89, 255, 0.5);
+  box-shadow: 0 4px 18px var(--accent-glow);
 }
 
 .navbar-right {
@@ -99,9 +99,9 @@
 }
 
 .link.active {
-  color: var(--accent-2);
+  color: var(--accent);
   font-weight: 700;
-  background: rgba(38, 156, 235, 0.1);
+  background: var(--accent-tint);
 }
 
 .hamburger {
